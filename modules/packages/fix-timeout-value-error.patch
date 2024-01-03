@@ -1,0 +1,20 @@
+diff --git a/proton/cert_pinning.py b/proton/cert_pinning.py
+index e39298b..b33b9ec 100644
+--- a/proton/cert_pinning.py
++++ b/proton/cert_pinning.py
+@@ -44,7 +44,6 @@ class TLSPinningHTTPSConnectionPool(HTTPSConnectionPool):
+             super(TLSPinningHTTPSConnectionPool, self).__init__(
+                 host,
+                 port,
+-                strict,
+                 timeout,
+                 maxsize,
+                 block,
+@@ -67,7 +66,6 @@ class TLSPinningHTTPSConnectionPool(HTTPSConnectionPool):
+             super(TLSPinningHTTPSConnectionPool, self).__init__(
+                 host,
+                 port,
+-                strict,
+                 timeout,
+                 maxsize,
+                 block,
