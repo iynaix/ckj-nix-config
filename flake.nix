@@ -16,7 +16,7 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.extraSpecialArgs = { inherit inputs; };
-          home-manager.users.jwrhine.imports = [ ./nixos/home.nix ];
+          home-manager.users.jwrhine.imports = [ ./hosts/laptop/home.nix ];
         }
       ];
     };
