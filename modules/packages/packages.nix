@@ -6,11 +6,6 @@
       enable = true;
     };
   };  
-  nixpkgs = {
-    config = {
-      allowUnfree = true;
-    };
-  };  
   
   environment = {
     shells = with pkgs; [ zsh ];

@@ -6,7 +6,8 @@
       ../../modules/media/audio.nix
       ../../modules/fonts/fonts.nix
       ../../modules/packages/git.nix
-      ../../modules/desktop-environments/gnome.nix
+      ../../modules/desktops/gnome.nix
+      ../../modules/nix/nix.nix
       ../../modules/packages/packages.nix
       ../../modules/printing/printing.nix
       ../../modules/packages/steam.nix
@@ -95,19 +96,19 @@
   };
 
   nix = {
-    settings = {
-      experimental-features = [
-        "nix-command"
-        "flakes"
-      ];
-      auto-optimise-store = true;
-    };
-    gc = {
-      automatic = true;
-      dates = "weekly";
-      options = "--delete-older-than 7d";
-    };
-  };
+#    settings = {
+#      experimental-features = [
+#        "nix-command"
+#        "flakes"
+#      ];
+#      auto-optimise-store = true;
+#    };
+#    gc = {
+#      automatic = true;
+#      dates = "weekly";
+#      options = "--delete-older-than 7d";
+#    };
+#  };
 
 ##########
 
