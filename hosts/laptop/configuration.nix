@@ -7,7 +7,7 @@
       ../../modules/fonts/fonts.nix
       ../../modules/packages/git.nix
       ../../modules/desktops/gnome.nix
-#      ../../modules/editors/emacs.nix
+      ../../modules/editors/emacs.nix
       ../../modules/nix/nix.nix
       ../../modules/packages/packages.nix
       ../../modules/printing/printing.nix
@@ -82,11 +82,6 @@
       # remove xterm by default
       excludePackages = [pkgs.xterm];
     };
-    emacs = {
-      enable = true;
-      package = pkgs.emacs-gtk;
-      install = true;
-    };
 
 ##########
 
@@ -101,21 +96,6 @@
       enable = true;
     };
   };
-
-#  nix = {
-#    settings = {
-#      experimental-features = [
-#        "nix-command"
-#        "flakes"
-#      ];
-#      auto-optimise-store = true;
-#    };
-#    gc = {
-#      automatic = true;
-#      dates = "weekly";
-#      options = "--delete-older-than 7d";
-#    };
-#  };
 
 ##########
 
