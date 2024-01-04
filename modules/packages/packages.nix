@@ -6,7 +6,13 @@
       enable = true;
     };
   };  
-  
+
+  programs = {
+    nano = {
+      enable = false;
+    };
+  };
+
   environment = {
     shells = with pkgs; [ zsh ];
     systemPackages = with pkgs; [
