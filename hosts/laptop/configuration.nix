@@ -8,6 +8,7 @@
       ../../modules/packages/git.nix
       ../../modules/desktops/gnome.nix
       ../../modules/nix/nix.nix
+      ../../modules/packages/emacs.nix
       ../../modules/packages/packages.nix
       ../../modules/printing/printing.nix
       ../../modules/packages/steam.nix
