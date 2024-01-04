@@ -11,6 +11,7 @@
       ../../modules/nix/nix.nix
       ../../modules/packages/packages.nix
       ../../modules/printing/printing.nix
+      ../../modules/packages/rebuild-printout.nix
       ../../modules/packages/steam.nix
       ../../modules/packages/vm.nix
       ../../modules/shells/zsh.nix
@@ -80,6 +81,11 @@
       xkbVariant = "";
       # remove xterm by default
       excludePackages = [pkgs.xterm];
+    };
+    emacs = {
+      enable = true;
+      package = pkgs.emacs-gtk;
+      install = true;
     };
 
 ##########

@@ -30,6 +30,7 @@
       gnomeExtensions.caffeine
       gnomeExtensions.dash-to-dock
       gnomeExtensions.notification-timeout
+      gnomeExtensions.only-window-maximize
       gnome-extension-manager
       ];
   };
