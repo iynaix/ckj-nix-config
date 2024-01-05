@@ -9,9 +9,9 @@
       ../../modules/desktops/gnome.nix
       ../../modules/editors/emacs.nix
       ../../modules/nix/nix.nix
+      ../../modules/packages/nh.nix
       ../../modules/packages/packages.nix
       ../../modules/printing/printing.nix
-      ../../modules/packages/rebuild-printout.nix
       ../../modules/packages/steam.nix
       ../../modules/packages/vm.nix
       ../../modules/shells/zsh.nix
