@@ -3,7 +3,7 @@
 {
   environment = {
     sessionVariables = {
-      FLAKE = "~/nixos"
+      FLAKE = "~/nixos";
     };  
     systemPackages = with pkgs; [
       nh
