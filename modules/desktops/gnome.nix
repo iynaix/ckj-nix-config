@@ -29,6 +29,7 @@
       gnomeExtensions.burn-my-windows
       gnomeExtensions.caffeine
       gnomeExtensions.dash-to-dock
+      gnomeExtensions.media-controls
       gnomeExtensions.notification-timeout
       gnomeExtensions.only-window-maximize
       gnome-extension-manager
