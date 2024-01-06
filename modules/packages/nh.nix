@@ -7,7 +7,6 @@
     };  
     systemPackages = with pkgs; [
       nh
-      nix-current-generation
       ];
   };
 }
