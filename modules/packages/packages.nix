@@ -23,7 +23,6 @@
       btop
       (callPackage ./spotify-adblock.nix {})
       cmatrix
-      distrobox
       element-desktop
       espanso-wayland
       firefox
@@ -38,7 +37,6 @@
       libnotify
       librewolf
       lm_sensors
-      lutris
       lsd
       mako
       mpv
