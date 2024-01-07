@@ -13,7 +13,7 @@
       ../../modules/packages/packages.nix
       ../../modules/printing/printing.nix
       ../../modules/packages/steam.nix
-      ../../modules/packages/vm.nix
+#      ../../modules/packages/vm.nix
       ../../modules/shells/zsh.nix
       ./hardware-configuration.nix
     ];
