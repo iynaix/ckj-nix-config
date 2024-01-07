@@ -23,7 +23,6 @@
       btop
       (callPackage ./spotify-adblock.nix {})
       cmatrix
-      element-desktop
       espanso-wayland
       firefox
       fractal
