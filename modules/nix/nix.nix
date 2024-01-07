@@ -6,7 +6,8 @@
     gc = {
       automatic = true;
       dates = "weekly";
-      options = "--delete-older-than 7d";
+      delete_generations = "+5"; # Option added by nix-gc-env
+      options = "--delete-older-than 7d";   
     };
     settings = {
       experimental-features = [ 
