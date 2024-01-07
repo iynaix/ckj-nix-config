@@ -1,4 +1,4 @@
-{packages, ... }:
+{pkgs, ... }:
 
 {
  users.users.jwrhine.packages = with pkgs; [
