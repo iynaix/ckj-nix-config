@@ -9,7 +9,6 @@
       ../../modules/desktops/gnome.nix
       ../../modules/editors/emacs.nix
       ../../modules/nix/nix.nix
-      ../../modules/packages/blizzard.nix
       ../../modules/packages/nh.nix
       ../../modules/packages/packages.nix
       ../../modules/printing/printing.nix
