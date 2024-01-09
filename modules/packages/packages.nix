@@ -1,12 +1,6 @@
 { config, pkgs, lib, ... }:
 
 {
-  services = {
-    flatpak = {
-      enable = true;
-    };
-  };  
-
   programs = {
     nano = {
       enable = false;

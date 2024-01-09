@@ -2,20 +2,21 @@
 
 {
   imports =
-    [
-      ../../modules/media/audio.nix
-      ../../modules/fonts/fonts.nix
-      ../../modules/packages/git.nix
+    [ 
+      ./hardware-configuration.nix
       ../../modules/desktops/gnome.nix
       ../../modules/editors/emacs.nix
+      ../../modules/fonts/fonts.nix
+      ../../modules/media/audio.nix
       ../../modules/nix/nix.nix
+      ../../modules/packages/flatpak.nix
+      ../../modules/packages/git.nix
       ../../modules/packages/nh.nix
       ../../modules/packages/packages.nix
-      ../../modules/printing/printing.nix
       ../../modules/packages/steam.nix
 #      ../../modules/packages/vm.nix
+      ../../modules/printing/printing.nix
       ../../modules/shells/zsh.nix
-      ./hardware-configuration.nix
     ];
 
   boot = {
