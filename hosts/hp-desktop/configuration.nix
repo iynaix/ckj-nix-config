@@ -101,6 +101,20 @@
       ];
       packages = with pkgs; [];
     };
+    users.amreed = {
+      isNormalUser = true;
+      description = "Aiden";
+      extraGroups = [
+      ];
+      packages = with pkgs; [];
+    };
+    users.gcreed = {
+      isNormalUser = true;
+      description = "Gavin";
+      extraGroups = [
+      ];
+      packages = with pkgs; [];
+    };
   };
 
   system = {
