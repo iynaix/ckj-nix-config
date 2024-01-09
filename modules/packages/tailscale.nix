@@ -39,7 +39,7 @@
       fi
 
       # otherwise authenticate with tailscale
-      ${tailscale}/bin/tailscale up -authkey tskey-auth-krt48J2CNTRL-DtSyPEjkZLHXSPkjsWq8LHR41hLUpSzi
+      ${tailscale}/bin/tailscale up -authkey tskey-auth-nunyabusiness
     '';
   };
 
