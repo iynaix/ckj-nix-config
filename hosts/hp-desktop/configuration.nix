@@ -14,9 +14,9 @@
       ../../modules/packages/git.nix
       ../../modules/packages/nh.nix
       ../../modules/packages/hp-packages.nix
-      ../../modules/packages/steam.nix
+#      ../../modules/packages/steam.nix
 #      ../../modules/packages/vm.nix
-      ../../modules/printing/printing.nix
+#      ../../modules/printing/printing.nix
       ../../modules/shells/zsh.nix
     ];
 
