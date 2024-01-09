@@ -7,18 +7,66 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
-    nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
-      specialArgs = { inherit inputs; };
-      modules = [
-        ./hosts/laptop/configuration.nix
-        home-manager.nixosModules.home-manager
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.extraSpecialArgs = { inherit inputs; };
-          home-manager.users.jwrhine.imports = [ ./hosts/laptop/home.nix ];
-        }
-      ];
+  outputs = inputs @ {
+    self,
+    nixpkgs,
+    ...
+  }:
+
+  {
+    nixosConfigurations = let
+      user = "jwrhine";
+      mkHost = host:
+        nixpkgs.lib.nixosSystem rec {
+          system = "x86_64-linux";
+
+          specialArgs = {
+            inherit (nixpkgs) lib;
+            inherit inputs nixpkgs system user;
+          };
+
+          modules = [
+            inputs.home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.${user} = {
+                  imports = [
+                    # common home-manager configuration
+                    # ./home.nix
+                    # host specific home-manager configuration
+                    ./hosts/${host}/home.nix
+                  ];
+
+                  home = {
+                    username = user;
+                    homeDirectory = "/home/${user}";
+                    # do not change this value
+                    stateVersion = "23.05";
+                  };
+
+                  # Let Home Manager install and manage itself.
+                  programs.home-manager.enable = true;
+                };
+              };
+            }
+            # common configuration
+            # ./configuration.nix
+            # host specific configuration
+            ./hosts/${host}/configuration.nix
+            # host specific hardware configuration
+            ./hosts/${host}/hardware-configuration.nix
+          ];
+        };
+    in {
+      # update with `nix flake update`
+      # rebuild with `nixos-rebuild switch --flake .#laptop`
+      laptop = mkHost "laptop";
+      # update with `nix flake update`
+      # rebuild with `nixos-rebuild switch --flake .#hp-desktop`
+      hp-desktop = mkHost "hp-desktop";
     };
-  };
-}
+
+      };
+    }
