@@ -14,6 +14,7 @@
       ../../modules/packages/nh.nix
       ../../modules/packages/packages.nix
       ../../modules/packages/steam.nix
+      ../../modules/packages/tailscale.nix
 #      ../../modules/packages/vm.nix
       ../../modules/printing/printing.nix
       ../../modules/shells/zsh.nix
