@@ -65,7 +65,7 @@
   };
 
   powerManagement = {
-    cpuFeqGovernor = "performance";
+    cpuFreqGovernor = "performance";
   };  
 
   services = {
