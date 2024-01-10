@@ -32,7 +32,6 @@
       enable = true;
       theme = "breeze";
     };
-    kernelPackages = pkgs.linuxPackages_latest;
   };
 
   networking = {
