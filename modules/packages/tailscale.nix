@@ -12,6 +12,7 @@
   services = {
     tailscale = {
       enable = true;
+      # port = 12345;
     };
   };
 
@@ -39,7 +40,7 @@
       fi
 
       # otherwise authenticate with tailscale
-      ${tailscale}/bin/tailscale up -authkey tskey-auth-nunyabusiness
+      ${tailscale}/bin/tailscale up -authkey <insert generated key here>
     '';
   };
 
