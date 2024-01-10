@@ -3,15 +3,15 @@
 {
   imports =
     [ 
-      ../../modules/fonts/fonts.nix
-      ../../modules/media/audio.nix
-      ../../modules/nix/nix.nix
-      ../../modules/packages/git.nix
-      ../../modules/packages/nh.nix
-      ../../modules/packages/packages.nix
-      ../../modules/packages/tailscale.nix
-      ../../modules/printing/printing.nix
-      ../../modules/shells/zsh.nix
+      ./modules/fonts/fonts.nix
+      ./modules/media/audio.nix
+      ./modules/nix/nix.nix
+      ./modules/packages/git.nix
+      ./modules/packages/nh.nix
+      ./modules/packages/packages.nix
+      ./modules/packages/tailscale.nix
+      ./modules/printing/printing.nix
+      ./modules/shells/zsh.nix
     ];
 
   boot = {
