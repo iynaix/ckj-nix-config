@@ -32,6 +32,7 @@
       gnomeExtensions.media-controls
       gnomeExtensions.notification-timeout
       gnomeExtensions.only-window-maximize
+      gnomeExtensions.tailscale-status
       gnome-extension-manager
       ];
   };
