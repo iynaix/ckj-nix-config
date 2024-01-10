@@ -32,7 +32,7 @@
   };
 
   networking = {
-    hostName = "laptop";
+    hostName = "hp-desktop";
     networkmanager = {
       enable = true;
     };  
