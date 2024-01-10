@@ -34,9 +34,9 @@
                 users.${user} = {
                   imports = [
                     # common home-manager configuration
-                    # ./home.nix
+                    ./home.nix
                     # host specific home-manager configuration
-                    ./hosts/${host}/home.nix
+                    # ./hosts/${host}/home.nix
                   ];
 
                   home = {
@@ -52,7 +52,7 @@
               };
             }
             # common configuration
-            # ./configuration.nix
+            ./configuration.nix
             # host specific configuration
             ./hosts/${host}/configuration.nix
             # host specific hardware configuration
