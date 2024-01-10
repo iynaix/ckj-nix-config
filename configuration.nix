@@ -57,6 +57,7 @@
       # remove xterm by default
       excludePackages = [pkgs.xterm];
     };
+  };  
 
   hardware = {
     enableAllFirmware = true;
@@ -84,5 +85,4 @@
   system = {
     stateVersion = "23.11";
   };
-
 }
