@@ -7,7 +7,7 @@
 #      ../../modules/desktops/gnome.nix
       ../../modules/desktops/xfce.nix
 #      ../../modules/editors/emacs.nix
-#      ../../modules/fonts/fonts.nix
+      ../../modules/fonts/fonts.nix
       ../../modules/media/audio.nix
       ../../modules/nix/nix.nix
 #      ../../modules/packages/flatpak.nix
@@ -64,6 +64,10 @@
     };
   };
 
+  powerManagement = {
+    cpuFeqGovernor = "performance";
+  };  
+
   services = {
     xserver = {
       enable = true;
@@ -93,11 +97,7 @@
       description = "John";
       extraGroups = [
         "wheel"
-	"docker"
 	"networkmanager"
-	"plugdev"
-	"tty"
-        "video"
       ];
       packages = with pkgs; [];
     };
