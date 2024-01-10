@@ -6,8 +6,8 @@
       ./hardware-configuration.nix
 #      ../../modules/desktops/gnome.nix
       ../../modules/desktops/xfce.nix
-      ../../modules/editors/emacs.nix
-      ../../modules/fonts/fonts.nix
+#      ../../modules/editors/emacs.nix
+#      ../../modules/fonts/fonts.nix
       ../../modules/media/audio.nix
       ../../modules/nix/nix.nix
 #      ../../modules/packages/flatpak.nix

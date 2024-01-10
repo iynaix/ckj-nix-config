@@ -10,22 +10,15 @@
   environment = {
     shells = with pkgs; [ zsh ];
     systemPackages = with pkgs; [
-      cmatrix
       firefox
-      gimp
-      glib
-      jq
-      killall
       kitty
-      libimobiledevice
-      libnotify
-      librewolf
+      krita
+      libsForQt5.kcalc
       lm_sensors
       lsd
       mako
       neofetch
       neovim
-      pkgs.python311Full
       wget
       ];
   };
