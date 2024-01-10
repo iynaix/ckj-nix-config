@@ -26,6 +26,9 @@
         enable = true;
 	device = "/dev/sda";
       };
+    };  
+    tmp = {
+      cleanOnBoot = true;
     };
     kernelPackages = pkgs.linuxPackages_latest;
   };
@@ -75,19 +78,11 @@
       # remove xterm by default
       excludePackages = [pkgs.xterm];
     };
-
-##########
-
-#    tailscale = {
-#      enable = true;
-#    };
   };
  
   hardware = {
     enableAllFirmware = true;
   };
-
-##########
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users = { 

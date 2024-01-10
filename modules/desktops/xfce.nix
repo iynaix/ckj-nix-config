@@ -15,4 +15,10 @@
       };
     };
   };
+
+  environment = {
+    systemPackages = with pkgs; [
+      xfce.xfce4-pulseaudio-plugin  
+    ];
+  };
 }
