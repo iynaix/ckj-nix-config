@@ -21,6 +21,7 @@
       mako
       neofetch
       neovim
+      wallust
       wget
     ];
   };
