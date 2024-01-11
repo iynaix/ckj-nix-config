@@ -6,8 +6,11 @@
       enable = false;
     };
   };
-
+  
   environment = {
+    variables = {
+     EDITOR = "nvim";
+    };
     shells = with pkgs; [ zsh ];
     systemPackages = with pkgs; [
       fastfetch
