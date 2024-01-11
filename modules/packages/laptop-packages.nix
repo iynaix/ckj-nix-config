@@ -26,6 +26,7 @@
       pkgs.python311Full
       plymouth
       ranger
+      sops
       spotify
       spotifywm
       swappy

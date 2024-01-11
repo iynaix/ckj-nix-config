@@ -9,6 +9,7 @@
       ./modules/packages/git.nix
       ./modules/packages/nh.nix
       ./modules/packages/packages.nix
+      ./modules/packages/sops.nix
       ./modules/packages/tailscale.nix
       ./modules/printing/printing.nix
       ./modules/shells/zsh.nix
