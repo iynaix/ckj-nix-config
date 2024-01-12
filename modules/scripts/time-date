@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+notify-send -t 5000 "🗓️ $(date "+%A, %b %-d") ⏰$(date "+%l:%M %P")"

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+pamixer -d 5
+sleep 0.5
+notify-send -t 1000 "$( pamixer --get-volume ) %"

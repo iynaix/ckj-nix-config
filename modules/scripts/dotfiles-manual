@@ -1,0 +1,25 @@
+#!/bin/bash
+
+myrepo="$HOME/.dotfiles"
+gitthings="$HOME/Downloads/gitthings"
+scripts="$HOME/Downloads/gitthings/scripts"
+
+#Download Dots
+echo "Downloading Dotfiles"
+cd && git clone https://gitlab.com/CerealKillerJohn/dotfiles.git
+
+mv dotfiles .dotfiles
+
+cd $myrepo
+ln -s $HOME/.dotfiles/kitty ~/.config
+ln -s $HOME/.dotfiles/mako ~/.config
+# rm -r ~/.config/neofetch && ln -s $HOME/.dotfiles/neofetch ~/.config
+ln -s $HOME/.dotfiles/ranger ~/.config
+ln -s $HOME/.dotfiles/rofi ~/.config
+
+# cd $gitthings && git clone https://gitlab.com/thelinuxcast/scripts.git
+# cd $scripts
+# sudo cp *.sh weather.py /usr/local/bin
+
+# cd $HOME/.config
+# git clone https://gitlab.com/thelinuxcast/nvim.git

@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+pamixer --default-source -t
+
+if [ "$(pamixer --default-source --get-mute)" = true ]; then
+    makoctl dismiss -a
+	notify-send "MIC MUTED"
+else
+	notify-send -u critical "LIVE MIC"
+fi

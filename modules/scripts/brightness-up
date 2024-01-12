@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+brightnessctl set +5%
+sleep 0.5
+notify-send -t 1000 "$( brightnessctl -m -d intel_backlight | awk -F, '{print substr($4, 0, length($4)-1)}' ) %"
