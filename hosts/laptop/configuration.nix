@@ -6,10 +6,10 @@
       ./hardware-configuration.nix
       ../../modules/desktops/gnome.nix
       ../../modules/editors/emacs.nix
-      ../../modules/packages/flatpak.nix
-      ../../modules/packages/laptop-packages.nix
-      ../../modules/packages/steam.nix
-#      ../../modules/packages/vm.nix
+      ../../packages/flatpak.nix
+      ../../packages/laptop-packages.nix
+      ../../packages/steam.nix
+#      ../../packages/vm.nix
     ];
 
   boot = {
