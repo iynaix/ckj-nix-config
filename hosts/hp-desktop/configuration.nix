@@ -5,7 +5,7 @@
     [ 
       ./hardware-configuration.nix
       ../../modules/desktops/xfce.nix
-      ../../modules/packages/hp-packages.nix
+      ../../packages/hp-packages.nix
     ];
 
   boot = {
