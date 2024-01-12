@@ -10,7 +10,7 @@
       lal="lsd -al";
       config="lsd ~/.config";
       ga="git add";
-      ga.="git add .";
+      "ga."="git add .";
       gc="git commit -m";
       gpull="git pull";
       gpush="git push";
