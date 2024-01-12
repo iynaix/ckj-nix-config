@@ -22,4 +22,6 @@
       flake-up="cd ~/nixos; nix flake update; cd ~";
       nrs-dell="nh os switch --nom --hostname laptop";
       ko="./nixos/modules/scripts/kitty_opacity.nix";
+    };
+  };
 }
