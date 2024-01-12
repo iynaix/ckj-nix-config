@@ -12,6 +12,7 @@
       ./modules/packages/sops.nix
       ./modules/packages/tailscale.nix
       ./modules/printing/printing.nix
+      ./modules/shells/aliases.nix
       ./modules/shells/zsh.nix
     ];
 
