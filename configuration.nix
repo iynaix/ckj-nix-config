@@ -6,14 +6,14 @@
       ./modules/fonts/fonts.nix
       ./modules/media/audio.nix
       ./modules/nix/nix.nix
-      ./modules/packages/git.nix
-      ./modules/packages/nh.nix
-      ./modules/packages/packages.nix
-      ./modules/packages/sops.nix
-      ./modules/packages/tailscale.nix
       ./modules/printing/printing.nix
       ./modules/shells/aliases.nix
       ./modules/shells/zsh.nix
+      ./packages/git.nix
+      ./packages/nh.nix
+      ./packages/packages.nix
+      ./packages/sops.nix
+      ./packages/tailscale.nix
     ];
 
   boot = {
