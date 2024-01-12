@@ -3,7 +3,7 @@
     shellAliases = {
       v="nvim";
       sv="sudo nvim";
-      ..="cd ..";
+      ".."="cd ..";
       ls="lsd";
       ll="lsd -l";
       la="lsd -a";
