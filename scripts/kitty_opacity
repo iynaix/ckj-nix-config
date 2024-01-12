@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Return to $HOME
+cd ~
+
 # Prompt user for input
 read -p "What would you like to set the background opacity in kitty to ? " opacity
 
