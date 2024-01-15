@@ -47,4 +47,10 @@
       enable = true;
     };
   };
+  
+  jwrhine = {
+    impermanence = {
+      enable = true; # make false to disable
+    };
+  }:
 }
