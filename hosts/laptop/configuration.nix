@@ -48,10 +48,8 @@
       enable = true;
     };
   };
-  
-  services = {
-    impermanence = {
-      enable = true; # make false to disable
-    };
+
+  impermanence = {
+    enable = true; # make false to disable
   };
 }
