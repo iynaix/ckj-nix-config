@@ -48,8 +48,4 @@
       enable = true;
     };
   };
-
-  impermanence = {
-    enable = true; # make false to disable
-  };
 }
