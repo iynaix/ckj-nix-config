@@ -59,5 +59,4 @@ fileSystems = {
       fsType = "zfs";
     };
   };
-};
 }
