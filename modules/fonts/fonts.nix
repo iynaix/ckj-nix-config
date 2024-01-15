@@ -5,8 +5,11 @@
     packages = with pkgs; [
       (nerdfonts.override {
         fonts = [
-	  "JetBrainsMono"
-	];
+     "JetBrainsMono"
+     "Hack"
+     "Iosveka"
+     "Meslo"
+    ];
       })
     ];
   };

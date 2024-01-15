@@ -79,6 +79,8 @@
 	  "tty"
           "video"
         ];
+	initialPassword = "jwrhine";
+        hashedPasswordFile = "/path/to/hiddenpasswordfile";
         packages = with pkgs; [];
       };
     };
