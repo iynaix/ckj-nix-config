@@ -1,3 +1,6 @@
+{ config, pkgs, lib, ... }:
+
+{
 # booting with zfs
 boot = {
   supportedFilesystems = ["zfs"];
@@ -57,3 +60,4 @@ fileSystems = {
     };
   };
 };
+}
