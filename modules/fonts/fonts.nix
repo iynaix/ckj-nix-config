@@ -7,7 +7,7 @@
         fonts = [
      "JetBrainsMono"
      "Hack"
-     "Iosveka"
+#     "Iosveka"
      "Meslo"
     ];
       })
