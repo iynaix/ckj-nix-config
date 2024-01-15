@@ -49,7 +49,7 @@
     };
   };
   
-  jwrhine = {
+  services = {
     impermanence = {
       enable = true; # make false to disable
     };
