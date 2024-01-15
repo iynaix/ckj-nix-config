@@ -4,6 +4,7 @@
   imports =
     [ 
       ./hardware-configuration.nix
+      ./intel-zfs.nix
       ../../modules/desktops/gnome.nix
       ../../modules/editors/emacs.nix
       ../../packages/flatpak.nix
