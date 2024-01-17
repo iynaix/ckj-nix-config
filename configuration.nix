@@ -65,6 +65,14 @@
     enableAllFirmware = true;
   };
 
+  sops = {
+    secrets = {
+      up = {
+        neededForUsers = true;
+      };
+    };
+  };  
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users = { 
     users = {
@@ -79,8 +87,8 @@
 	  "tty"
           "video"
         ];
-	initialPassword = "jwrhine";
-        hashedPasswordFile = "/path/to/hiddenpasswordfile";
+#	initialPassword = "046581";
+        hashedPasswordFile = config.sops.secrets.up.path;
         packages = with pkgs; [];
       };
     };

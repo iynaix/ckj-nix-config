@@ -13,6 +13,7 @@
   outputs = inputs @ {
     self,
     nixpkgs,
+#    sops-nix,
     ...
   }:
 
@@ -29,7 +30,8 @@
           };
 
           modules = [
-            inputs.home-manager.nixosModules.home-manager
+ #           sops-nix.nixosModules.sops
+	    inputs.home-manager.nixosModules.home-manager
             {
               home-manager = {
                 useGlobalPkgs = true;

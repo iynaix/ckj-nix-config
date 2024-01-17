@@ -3,8 +3,9 @@
 {
   imports =
     [ 
-#      ./hardware-configuration.nix
+      ./hardware-configuration.nix
       ./intel-zfs.nix
+      ./impermanence.nix
       ../../modules/desktops/gnome.nix
       ../../modules/editors/emacs.nix
       ../../packages/flatpak.nix
@@ -34,6 +35,12 @@
       theme = "breeze";
     };
   };
+  
+  environment = {
+    etc."NetworkManager/system-connections" = {
+      source = "/persist/etc/NetworkManager/system-connections/";
+    };
+  };  
 
   networking = {
     hostName = "laptop";
@@ -42,10 +49,16 @@
       # noProxy = "127.0.0.1,localhost,internal.domain";
     # };  
   };
- 
+  
   hardware = {
     bluetooth = {
       enable = true;
     };
   };
+
+  custom = {
+    impermanence = {
+      enable = true;
+    };
+  };  
 }
