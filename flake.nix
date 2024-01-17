@@ -1,7 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "github:Nixos/nixpkgs/nixos-unstable";
-#    sops-nix.url = "github:Mic92/sops-nix";
+    sops-nix.url = "github:Mic92/sops-nix";
     # optional, not necessary for the module
     # sops-nix.inputs.nixpkgs.follows = "nixpkgs";
     home-manager = {
