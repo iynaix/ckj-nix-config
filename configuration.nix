@@ -69,11 +69,21 @@
     };	
   };
 
+  systemd = {
+    services = {
+      "getty@tty1".enable = false; # fixes autologin with gdm
+      "autovt@tty1".enable = false; # https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
+    };
+  };
+
   hardware = {
     enableAllFirmware = true;
   };
 
   sops = {
+    gnupg = {
+      sshKeyPaths = [];
+    };
     secrets = {
       up = {
         neededForUsers = true;
@@ -101,6 +111,7 @@
 	  "plugdev"
 	  "tty"
           "video"
+	  config.users.groups.keys.name
         ];
 	initialPassword = "MelissaCC1978!";
         hashedPasswordFile = config.sops.secrets.up.path;
@@ -108,13 +119,6 @@
       };
     };
   };  
-
-  systemd = {
-    services = {
-      "getty@tty1".enable = false; # fixes autologin with gdm
-      "autovt@tty1".enable = false; # https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
-    };
-  };
 
   system = {
     stateVersion = "23.11";
