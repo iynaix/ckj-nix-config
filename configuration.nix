@@ -85,6 +85,9 @@
   users = { 
     mutableUsers = false;
     users = {
+      root = {
+        hashedPasswordFile = config.sops.secrets.rp.path;
+      };  
       jwrhine = {
         isNormalUser = true;
         description = "John";
@@ -96,7 +99,7 @@
 	  "tty"
           "video"
         ];
-#	initialPassword = "046581";
+	initialPassword = "MelissaCC1978!";
         hashedPasswordFile = config.sops.secrets.up.path;
         packages = with pkgs; [];
       };
