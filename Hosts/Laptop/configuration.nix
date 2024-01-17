@@ -6,12 +6,12 @@
       ./hardware-configuration.nix
       ./intel-zfs.nix
       ./impermanence.nix
-      ../../modules/desktops/gnome.nix
-      ../../modules/editors/emacs.nix
-      ../../packages/flatpak.nix
-      ../../packages/laptop-packages.nix
-      ../../packages/steam.nix
-#      ../../packages/vm.nix
+      ../../Desktops/gnome.nix
+      ../../Editors/emacs.nix
+      ../../Packages/flatpak.nix
+      ../../Packages/laptop-packages.nix
+      ../../Packages/steam.nix
+#      ../../Packages/vm.nix
     ];
 
   boot = {

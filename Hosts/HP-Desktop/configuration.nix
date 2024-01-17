@@ -4,8 +4,8 @@
   imports =
     [ 
       ./hardware-configuration.nix
-      ../../modules/desktops/xfce.nix
-      ../../packages/hp-packages.nix
+      ../../Desktops/xfce.nix
+      ../../Packages/hp-packages.nix
     ];
 
   boot = {
