@@ -113,7 +113,7 @@
           "video"
 #	  config.users.groups.keys.name
         ];
-	initialPassword = "MelissaCC1978!";
+	initialPassword = "password";
  #       hashedPasswordFile = config.sops.secrets.up.path;
         packages = with pkgs; [];
       };
