@@ -58,8 +58,16 @@
       xkbVariant = "";
       # remove xterm by default
       excludePackages = [pkgs.xterm];
-    };
-  };  
+      displayManager = {
+        autoLogin = {
+	  user = "jwrhine";
+	};
+      };
+    };  
+    getty = {
+      autologinUser = "jwrhine";
+    };	
+  };
 
   hardware = {
     enableAllFirmware = true;
