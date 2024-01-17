@@ -78,6 +78,9 @@
       up = {
         neededForUsers = true;
       };
+      rp = {
+        neededForUsers = true;
+      };
     };
   };  
 
