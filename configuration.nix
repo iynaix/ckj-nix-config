@@ -12,8 +12,8 @@
       ./packages/git.nix
       ./packages/nh.nix
       ./packages/packages.nix
-      ./packages/sops.nix
-      ./packages/tailscale.nix
+#      ./packages/sops.nix
+#      ./packages/tailscale.nix
     ];
 
   boot = {
@@ -79,28 +79,28 @@
     enableAllFirmware = true;
   };
 
-  sops = {
-    gnupg = {
-      sshKeyPaths = [];
-    };
-    secrets = {
-      up = {
-        neededForUsers = true;
-      };
-      rp = {
-        neededForUsers = true;
-      };
-    };
-  };  
+#  sops = {
+#    gnupg = {
+#      sshKeyPaths = [];
+#    };
+#    secrets = {
+#      up = {
+#        neededForUsers = true;
+#      };
+#      rp = {
+#        neededForUsers = true;
+#      };
+#    };
+#  };  
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
 
   users = { 
     mutableUsers = false;
     users = {
-      root = {
-        hashedPasswordFile = config.sops.secrets.rp.path;
-      };  
+ #     root = {
+ #       hashedPasswordFile = config.sops.secrets.rp.path;
+ #     };  
       jwrhine = {
         isNormalUser = true;
         description = "John";
@@ -111,10 +111,10 @@
 	  "plugdev"
 	  "tty"
           "video"
-	  config.users.groups.keys.name
+#	  config.users.groups.keys.name
         ];
 	initialPassword = "MelissaCC1978!";
-        hashedPasswordFile = config.sops.secrets.up.path;
+ #       hashedPasswordFile = config.sops.secrets.up.path;
         packages = with pkgs; [];
       };
     };
