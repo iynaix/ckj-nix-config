@@ -11,6 +11,7 @@
       (callPackage ../../nixos/spotify-adblock.nix {})
       cmatrix
       espanso-wayland
+      floorp
       fractal
       gimp
       glib

@@ -3,6 +3,10 @@
 {
   xdg = {
     configFile = {
+      "doom" = {
+        source = ./doom;
+        recursive = true;
+      };
       "kitty" = {
         source = ./kitty;
         recursive = true;
