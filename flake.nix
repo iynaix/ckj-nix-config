@@ -1,7 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "github:Nixos/nixpkgs/nixos-unstable";
-    sops-nix.url = "github:Mic92/sops-nix";
+    # sops-nix.url = "github:Mic92/sops-nix";
     # optional, not necessary for the module
     # sops-nix.inputs.nixpkgs.follows = "nixpkgs";
     home-manager = {
@@ -66,11 +66,11 @@
         };
     in {
       # update with `nix flake update`
-      # rebuild with `nixos-rebuild switch --flake .#laptop`
-      laptop = mkHost "laptop";
+      # rebuild with `nixos-rebuild switch --flake .#latitude`
+      laptop = mkHost "latitude";
       # update with `nix flake update`
-      # rebuild with `nixos-rebuild switch --flake .#hp-desktop`
-      hp-desktop = mkHost "hp-desktop";
+      # rebuild with `nixos-rebuild switch --flake .#desktop`
+      hp-desktop = mkHost "desktop";
     };
 
       };

@@ -3,17 +3,7 @@
 {
   imports =
     [ 
-      ./modules/fonts/fonts.nix
-      ./modules/media/audio.nix
-      ./modules/nix/nix.nix
-      ./modules/printing/printing.nix
-      ./modules/shells/aliases.nix
-      ./modules/shells/zsh.nix
-      ./packages/git.nix
-      ./packages/nh.nix
-      ./packages/packages.nix
-#      ./packages/sops.nix
-#      ./packages/tailscale.nix
+      ./default.nix
     ];
 
   boot = {

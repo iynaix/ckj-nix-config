@@ -3,9 +3,8 @@
 {
   imports =
     [ 
+      ./default.nix
       ./hardware-configuration.nix
-      ../../Desktops/xfce.nix
-      ../../Packages/hp-packages.nix
     ];
 
   boot = {
@@ -18,7 +17,7 @@
   };
 
   networking = {
-    hostName = "hp-desktop";
+    hostName = "desktop";
     # proxy = {
       # default = "http://user:password@proxy:port/";
       # noProxy = "127.0.0.1,localhost,internal.domain";

@@ -3,15 +3,11 @@
 {
   imports =
     [ 
+      ./default.nix
       ./hardware-configuration.nix
       ./intel-zfs.nix
       ./impermanence.nix
-      ../../Desktops/gnome.nix
-      ../../Editors/emacs.nix
-      ../../Packages/flatpak.nix
-      ../../Packages/laptop-packages.nix
-      ../../Packages/steam.nix
-#      ../../Packages/vm.nix
+      ./latitude-packages.nix
     ];
 
   boot = {
@@ -43,7 +39,7 @@
   };  
 
   networking = {
-    hostName = "laptop";
+    hostName = "latitude";
     # proxy = {
       # default = "http://user:password@proxy:port/";
       # noProxy = "127.0.0.1,localhost,internal.domain";
