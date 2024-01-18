@@ -3,8 +3,9 @@
 {
   xdg = {
     configFile = {
-      "kitty/kitty.conf" = {
-        source = ./kitty.conf;
+      "kitty" = {
+        source = ./kitty;
+        recursive = true;
       };	
       "neofetch" = {
         source = ./neofetch;
