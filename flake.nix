@@ -67,10 +67,10 @@
     in {
       # update with `nix flake update`
       # rebuild with `nixos-rebuild switch --flake .#latitude`
-      laptop = mkHost "latitude";
+      latitude = mkHost "latitude";
       # update with `nix flake update`
       # rebuild with `nixos-rebuild switch --flake .#desktop`
-      hp-desktop = mkHost "desktop";
+      desktop = mkHost "desktop";
     };
 
       };
