@@ -7,7 +7,7 @@
       ./hardware-configuration.nix
       ./intel-zfs.nix
       ./impermanence.nix
-      ./latitude-packages.nix
+      ./packages.nix
     ];
 
   boot = {

@@ -5,6 +5,7 @@
     [ 
       ./default.nix
       ./hardware-configuration.nix
+      ./packages.nix
     ];
 
   boot = {
