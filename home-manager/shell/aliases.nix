@@ -8,8 +8,8 @@
       sv="sudo nvim";
       
       # Move Through Directories
-      "~"="cd"
-      "."="cd ~/dotfiles"
+      "~"="cd";
+      "."="cd ~/dotfiles";
       ".."="cd ..";
       
       # Show Contents of Directories
