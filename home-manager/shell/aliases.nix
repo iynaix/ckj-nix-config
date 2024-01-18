@@ -1,26 +1,64 @@
 {
   environment = {
     shellAliases = {
+      
+      # Neovim Commands
+
       v="nvim";
       sv="sudo nvim";
+      
+      # Move Through Directories
+      "~"="cd"
+      "."="cd ~/dotfiles"
       ".."="cd ..";
+      
+      # Show Contents of Directories
+
       ls="lsd";
       ll="lsd -l";
       la="lsd -a";
       lal="lsd -al";
-      config="lsd ~/.config";
+     
+      # Show Contents of .Config Directory
+
+      conf="lsd ~/.config";
+     
+      # Git Commands
+
       ga="git add";
       "ga."="git add .";
       gc="git commit -m";
+      gf="git fetch";
       gpull="git pull";
       gpush="git push";
+     
+      # Neofetch
+
       neo="neofetch";
-      doom-update="~/.config/emacs/bin/doom upgrade";
-      flake="sv nixos/flake.nix";
-      home-dell="sv nixos/hosts/laptop/home.nix";
-      nc-dell="sv nixos/hosts/laptop/configuration.nix";
-      flake-up="cd ~/nixos; nix flake update; cd ~";
-      nrs-dell="nh os switch --nom --hostname laptop";
+     
+      # Doom Emacs Upgrade
+
+      doom-up="~/.config/emacs/bin/doom upgrade";
+      
+      # Flake Commands
+
+      flake="v nixos/flake.nix";
+      flake-up="cd ~/dotfiles; nix flake update; cd ~";
+      
+      # Desktop Commands
+
+      home-hp="v ~/dotfiles/hosts/desktop/home.nix";
+      nc-hp="v ~/dotfiles/hosts/desktop/configuration.nix";
+      nrs-hp="nh os switch --nom --hostname desktop";
+
+      # Latitude Commands
+
+      home-dell="v ~/dotfiles/hosts/latitude/home.nix";
+      nc-dell="v ~/dotfiles/hosts/latitude/configuration.nix";
+      nrs-dell="nh os switch --nom --hostname latitude";
+      
+      # Scripts
+
       ko="./dotfiles/scripts/kitty_opacity";
     };
   };
