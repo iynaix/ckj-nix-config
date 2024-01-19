@@ -86,7 +86,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
 
   users = { 
-    mutableUsers = false;
+#    mutableUsers = false;
     users = {
  #     root = {
  #       hashedPasswordFile = config.sops.secrets.rp.path;
@@ -96,11 +96,11 @@
         description = "John";
         extraGroups = [
           "wheel"
-	  "docker"
+#	  "docker"
 	  "networkmanager"
-	  "plugdev"
-	  "tty"
-          "video"
+#	  "plugdev"
+#	  "tty"
+#          "video"
 #	  config.users.groups.keys.name
         ];
 	initialPassword = "password";
@@ -110,7 +110,7 @@
     };
   };  
 
-  system = {
-    stateVersion = "23.11";
-  };
+#  system = {
+#    stateVersion = "23.11";
+#  };
 }
