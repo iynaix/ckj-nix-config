@@ -3,21 +3,22 @@
 {
   fonts = {
     packages = with pkgs; [
+      corefonts
+      dina-font
+      fira-code
+      fira-code-symbols
+      liberation_ttf
+      mplus-outline-fonts.githubRelease
       noto-fonts
       noto-fonts-cjk
       noto-fonts-emoji
-      liberation_ttf
-      fira-code
-      fira-code-symbols
-      mplus-outline-fonts.githubRelease
-      dina-font
       proggyfonts
       (nerdfonts.override {
         fonts = [
      "JetBrainsMono"
-     "Hack"
+#     "Hack"
 #     "Iosveka"
-     "Meslo"
+#     "Meslo"
         ];
       })
     ];  
