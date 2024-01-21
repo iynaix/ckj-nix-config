@@ -88,9 +88,39 @@ prin "${c6}│""${c4} ├Completed TLC Challenges-------->" "${c2}30 Days / Nano
 
 # Example usage in your configuration file
 start_date="2022-05-09 16:47:00"
-time_difference=$(($(date -d now -d "$start_date" +'%s') / (60*60*24)))
+current_date=$(date +'%Y-%m-%d %H:%M:%S')
+start_timestamp=$(date -d "$start_date" +'%s')
+current_timestamp=$(date -d "$current_date" +'%s')
+time_difference=$((current_timestamp - start_timestamp))
 
-prin "${c6}│""${c4} ╰Rewriting Config For------------> ${time_difference} days"
+# Function to wrap text in ANSI escape codes for color
+colorize() {
+    echo -e "\e[39m$1\e[49m"  # Default text color
+}
+
+# Calculate Years
+years=$((time_difference / (365 * 24 * 60 * 60)))
+years_str="$(colorize $years) $(colorize year$([ "$years" -ne 1 ] && echo "s"))"
+
+# Calculate Months
+remaining_days=$((time_difference % (365 * 24 * 60 * 60)))
+months=$((remaining_days / (30 * 24 * 60 * 60)))
+months_str="$(colorize $months) $(colorize month$([ "$months" -ne 1 ] && echo "s"))"
+
+# Calculate Weeks
+remaining_days=$((remaining_days % (30 * 24 * 60 * 60)))
+weeks=$((remaining_days / (7 * 24 * 60 * 60)))
+weeks_str="$(colorize $weeks) $(colorize week$([ "$weeks" -ne 1 ] && echo "s"))"
+
+# Calculate Days
+remaining_days=$((remaining_days % (7 * 24 * 60 * 60)))
+days=$((remaining_days / (24 * 60 * 60)))
+days_str="$(colorize $days) $(colorize day$([ "$days" -ne 1 ] && echo "s"))"
+
+# Concatenate the result with a space after ">"
+result=" ${years_str}, ${months_str}, ${weeks_str} & ${days_str}"
+
+prin "${c6}│""${c4} ╰I've Been Using Linux For------->" "${result}"
 
 # Define the function for calculating percentage of life spent on NixOS
 calculate_percentage_of_life_on_nixos() {
@@ -111,10 +141,10 @@ calculate_percentage_of_life_on_nixos() {
     # Remove decimal part if it's .00
     percentage=$(echo "$percentage" | sed 's/\.00$//')
 
-    echo " ${c2}$percentage% Of My Time On Linux I Have Been Using ${c4}N${c6}i${c4}x${c6}O${c4}S"
+    echo " ${c2}$percentage% Of That Time, I Have Been Using ${c4}N${c6}i${c4}x${c6}O${c4}S"
 }
 
-prin "${c6}│ ${c4} ╰───────────────────────────────> ${c6}$(calculate_percentage_of_life_on_nixos "2022-05-09 16:47:00" "2023-02-10 15:54:09")"
+prin "${c6}│ ${c4} ╰────────────And For────────────> ${c6}$(calculate_percentage_of_life_on_nixos "2022-05-09 16:47:00" "2023-02-10 15:54:09")"
 
 
     prin "$(color 6)╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────"
@@ -457,7 +487,7 @@ de_version="on"
 # disk_show=('/'):
 #      'Disk (/): 74G / 118G (66%)'
 #
-disk_show=('/')
+disk_show=('/persist')
 
 # Disk subtitle.
 # What to append to the Disk subtitle.
