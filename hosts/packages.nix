@@ -15,7 +15,9 @@
     systemPackages = with pkgs; [
       bunnyfetch
       cbonsai
+      cpufetch
       fastfetch
+      fetch-scm
       firefox
       kitty
       leaf
@@ -24,6 +26,7 @@
       mako
       neofetch
       neovim
+      nitch
       owofetch
       wallust
       wget
