@@ -19,6 +19,7 @@
       kitty
       lm_sensors
       lsd
+      macchina
       mako
       neofetch
       neovim
