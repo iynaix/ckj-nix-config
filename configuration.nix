@@ -47,43 +47,41 @@
       xkbVariant = "";
       # remove xterm by default
       excludePackages = [pkgs.xterm];
-      displayManager = {
-        autoLogin = {
-	  user = "jwrhine";
-	};
-      };
+#      displayManager = {
+#        autoLogin = {
+#	  user = "jwrhine";
+#	};
+#      };
     };  
-    getty = {
-      autologinUser = "jwrhine";
-    };	
+#    getty = {
+#      autologinUser = "jwrhine";
+#    };	
   };
 
-  systemd = {
-    services = {
-      "getty@tty1".enable = false; # fixes autologin with gdm
-      "autovt@tty1".enable = false; # https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
-    };
-  };
+#  systemd = {
+#    services = {
+#      "getty@tty1".enable = false; # fixes autologin with gdm
+#      "autovt@tty1".enable = false; # https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
+#    };
+#  };
 
   hardware = {
     enableAllFirmware = true;
   };
 
-#  sops = {
+  sops = {
 #    gnupg = {
 #      sshKeyPaths = [];
 #    };
-#    secrets = {
-#      up = {
-#        neededForUsers = true;
-#      };
+    secrets = {
+      userpassword = {
+        neededForUsers = true;
+      };
 #      rp = {
 #        neededForUsers = true;
 #      };
-#    };
-#  };  
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+    };
+  };  
 
   users = { 
 #    mutableUsers = false;
@@ -104,7 +102,7 @@
 #	  config.users.groups.keys.name
         ];
 	initialPassword = "password";
- #       hashedPasswordFile = config.sops.secrets.up.path;
+        hashedPasswordFile = config.sops.secrets.userpassword.path;
         packages = with pkgs; [];
       };
     };
