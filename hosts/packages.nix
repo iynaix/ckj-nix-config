@@ -21,6 +21,7 @@
       mako
       neofetch
       neovim
+      nim2
       nitch
       wallust
       wget
