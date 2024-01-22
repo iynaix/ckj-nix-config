@@ -7,6 +7,10 @@
         source = ./doom;
         recursive = true;
       };
+      "fastfetch" = {
+        source = ./fastfetch;
+        recursive = true;
+      };
       "kitty" = {
         source = ./kitty;
         recursive = true;

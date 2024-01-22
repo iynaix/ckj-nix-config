@@ -14,6 +14,7 @@
     shells = with pkgs; [ zsh ];
     systemPackages = with pkgs; [
       cbonsai
+      fastfetch
       firefox
       kitty
       lm_sensors
