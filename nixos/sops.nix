@@ -13,6 +13,9 @@
       keyFile = "/home/jwrhine/.config/sops/age/keys.txt";
     };
     secrets = {
+      userpassword = {
+        neededForUsers = true;
+      };	
 #      example-key = { };
       tailscale = { 
         owner = "jwrhine";

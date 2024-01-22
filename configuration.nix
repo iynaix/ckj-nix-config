@@ -1,4 +1,4 @@
-{ config, pkgs, lib, user, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports =
@@ -69,16 +69,16 @@
     enableAllFirmware = true;
   };
 
-  sops = {
-    secrets = {
-      userpassword = {
-        neededForUsers = true;
-      };
+#  sops = {
+#    secrets = {
+#      userpassword = {
+#        neededForUsers = true;
+#      };
 #      rp = {
 #        neededForUsers = true;
 #      };
-    };
-  };  
+#    };
+#  };  
 
   users = {
     mutableUsers = false;
