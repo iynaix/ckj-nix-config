@@ -80,7 +80,8 @@
     };
   };  
 
-  users = { 
+  users = {
+    mutableUsers = false;
     users = {
  #     root = {
  #       hashedPasswordFile = config.sops.secrets.rp.path;
@@ -92,7 +93,7 @@
           "wheel"
 	  "networkmanager"
         ];
-	initialPassword = "password";
+#	initialPassword = "password";
         hashedPasswordFile = config.sops.secrets.userpassword.path;
         packages = with pkgs; [];
       };
