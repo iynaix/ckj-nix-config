@@ -70,9 +70,6 @@
   };
 
   sops = {
-#    gnupg = {
-#      sshKeyPaths = [];
-#    };
     secrets = {
       userpassword = {
         neededForUsers = true;
@@ -84,7 +81,6 @@
   };  
 
   users = { 
-#    mutableUsers = false;
     users = {
  #     root = {
  #       hashedPasswordFile = config.sops.secrets.rp.path;
@@ -94,12 +90,7 @@
         description = "John";
         extraGroups = [
           "wheel"
-#	  "docker"
 	  "networkmanager"
-#	  "plugdev"
-#	  "tty"
-#          "video"
-#	  config.users.groups.keys.name
         ];
 	initialPassword = "password";
         hashedPasswordFile = config.sops.secrets.userpassword.path;
