@@ -45,26 +45,6 @@
       # noProxy = "127.0.0.1,localhost,internal.domain";
     # };  
   };
-  
-#  services = {
-#    xserver = {
-#      displayManager = {
-#        autoLogin = {
-#	  user = "jwrhine";
-#        };
-#      };
-#    };  
-#    getty = {
-#      autologinUser = "jwrhine";
-#    };	
-#  };
-
-#  systemd = {
-#    services = {
-#      "getty@tty1".enable = false; # fixes autologin with gdm
-#      "autovt@tty1".enable = false; # https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
-#    };
-#  };
 
   hardware = {
     bluetooth = {
