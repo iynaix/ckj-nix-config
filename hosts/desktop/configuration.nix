@@ -31,18 +31,7 @@
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users = { 
-    mutableUsers = false;
     users = {
-      jwrhine = {
-        isNormalUser = true;
-        description = "John";
-        extraGroups = [
-	  "wheel"
-	  "networkmanager"
-        ];
-	hashedPasswordFile = config.sops.secrets.userpassword.path;
-        packages = with pkgs; [];
-      };
       amreed = {
         isNormalUser = true;
         description = "Aiden";

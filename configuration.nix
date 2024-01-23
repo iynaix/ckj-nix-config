@@ -54,6 +54,20 @@
     enableAllFirmware = true;
   };
 
+  users = {
+    users = {
+      jwrhine = {
+        isNormalUser = true;
+	description = "John";
+	extraGroups = [
+	  "wheel"
+	  "networkmanager"
+	];
+	packages = with pkgs; [];
+      };
+    };
+  };  
+
   system = {
     # do not change this value
     stateVersion = "23.11";

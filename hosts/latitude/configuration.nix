@@ -86,15 +86,8 @@
  #       hashedPasswordFile = config.sops.secrets.rp.path;
  #     };  
       jwrhine = {
-        isNormalUser = true;
-        description = "John";
-        extraGroups = [
-          "wheel"
-	  "networkmanager"
-        ];
 #	initialPassword = "password";
         hashedPasswordFile = config.sops.secrets.userpassword.path;
-        packages = with pkgs; [];
       };
     };
   };
