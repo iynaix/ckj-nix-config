@@ -60,8 +60,9 @@
         isNormalUser = true;
 	description = "John";
 	extraGroups = [
-	  "wheel"
 	  "networkmanager"
+	  "users"
+	  "wheel"
 	];
 	packages = with pkgs; [];
       };

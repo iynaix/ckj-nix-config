@@ -8,7 +8,7 @@
       ./intel-zfs.nix
       ./impermanence.nix
       ./packages.nix
-#      ../../modules/nixos/persistence.nix
+      ../../modules/nixos/persistence.nix
     ];
 
   boot = {
@@ -24,7 +24,6 @@
       systemd = {
         enable = true;
       };
-#      luks.devices."luks-223bbc57-f4e3-44ab-983f-6d4a66789c94".device = "/dev/disk/by-uuid/223bbc57-f4e3-44ab-983f-6d4a66789c94";
     };
     kernelParams = ["quiet"];
     plymouth = {
@@ -33,12 +32,6 @@
     };
   };
   
-#  environment = {
-#    etc."NetworkManager/system-connections" = {
-#      source = "/persist/etc/NetworkManager/system-connections/";
-#    };
-#  };  
-
   networking = {
     hostName = "latitude";
     # proxy = {
@@ -60,12 +53,12 @@
 #    };	
 #  };
 
-#  systemd = {
-#    services = {
-#      "getty@tty1".enable = false; # fixes autologin with gdm
-#      "autovt@tty1".enable = false; # https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
-#    };
-#  };
+  systemd = {
+    services = {
+      "getty@tty1".enable = false; # fixes autologin with gdm
+      "autovt@tty1".enable = false; # https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
+    };
+  };
 
   hardware = {
     bluetooth = {
@@ -86,7 +79,7 @@
  #       hashedPasswordFile = config.sops.secrets.rp.path;
  #     };  
       jwrhine = {
-	      initialPassword = "password";
+	initialPassword = "password";
         # hashedPasswordFile = config.sops.secrets.userpassword.path;
       };
     };

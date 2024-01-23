@@ -1,11 +1,6 @@
 { pkgs, inputs, config, ... }:
 
 {
-  imports =
-    [
-      inputs.sops-nix.nixosModules.sops
-    ];
-
   sops = {
     defaultSopsFile = ../hosts/secrets.yaml;
     defaultSopsFormat = "yaml";
