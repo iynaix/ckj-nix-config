@@ -24,8 +24,9 @@
 
   home = {
     file = {
-      "/home/jwrhine/.librewolf/rj5h1ftg.default/chrome/userChrome.css" = {
-        source = ./userChrome.css;
+      "/home/jwrhine/.librewolf/ca1rhbaa.default/" = {
+        source = ./Chrome;
+        recursive = true;
         # text = ''<the content of the file here''; if you want nix to create the file
       };
     };
