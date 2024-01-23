@@ -30,6 +30,7 @@
 
           modules = [
 	    inputs.home-manager.nixosModules.home-manager
+	    inputs.impermanence.nixosModules.impermanence
             {
               home-manager = {
                 useGlobalPkgs = true;
