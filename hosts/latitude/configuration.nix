@@ -20,12 +20,12 @@
         canTouchEfiVariables = true;
       };
     };
-    initrd = {
-      systemd = {
-        enable = true;
-      };
-      luks.devices."luks-223bbc57-f4e3-44ab-983f-6d4a66789c94".device = "/dev/disk/by-uuid/223bbc57-f4e3-44ab-983f-6d4a66789c94";
-    };
+#    initrd = {
+#      systemd = {
+#        enable = true;
+#      };
+#      luks.devices."luks-223bbc57-f4e3-44ab-983f-6d4a66789c94".device = "/dev/disk/by-uuid/223bbc57-f4e3-44ab-983f-6d4a66789c94";
+#    };
     kernelParams = ["quiet"];
     plymouth = {
       enable = true;
