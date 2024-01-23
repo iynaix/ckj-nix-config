@@ -86,8 +86,8 @@
  #       hashedPasswordFile = config.sops.secrets.rp.path;
  #     };  
       jwrhine = {
-#	initialPassword = "password";
-        hashedPasswordFile = config.sops.secrets.userpassword.path;
+	      initialPassword = "password";
+        # hashedPasswordFile = config.sops.secrets.userpassword.path;
       };
     };
   };
