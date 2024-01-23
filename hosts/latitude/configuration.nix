@@ -8,6 +8,7 @@
       ./intel-zfs.nix
       ./impermanence.nix
       ./packages.nix
+      ./persistence.nix
     ];
 
   boot = {

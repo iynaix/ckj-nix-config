@@ -1,13 +1,14 @@
 {
   inputs = {
-    nixpkgs.url = "github:Nixos/nixpkgs/nixos-unstable";
-    sops-nix.url = "github:Mic92/sops-nix";
-    # optional, not necessary for the module
-    # sops-nix.inputs.nixpkgs.follows = "nixpkgs";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    impermanence.url = "github:nix-community/impermanence";
+    nixpkgs.url = "github:Nixos/nixpkgs/nixos-unstable";
+    sops-nix.url = "github:Mic92/sops-nix";
+    # optional, not necessary for the module
+    # sops-nix.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = inputs @ {
