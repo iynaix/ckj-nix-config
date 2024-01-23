@@ -3,7 +3,6 @@
 {
   environment = {
     shells = with pkgs; [ 
-      bashInteractive
       zsh 
     ];
     systemPackages = with pkgs; [
