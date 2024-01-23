@@ -174,13 +174,13 @@ fi
 sudo mount --mkdir -t zfs zroot/persist /mnt/persist
 
 while true; do
-    read -rp "Which host to install? (hp-desktop / laptop / vm / vm-amd) " host
+    read -rp "Which host to install? (desktop / latitude ) " host
     case $host in
-        hp-desktop|laptop|vm|vm-amd ) break;;
+        desktop|latitude ) break;;
         * ) echo "Invalid host. Please select a valid host.";;
     esac
 done
 
 read -rp "Enter git rev for flake (default: main): " git_rev
 echo "Installing NixOS"
-sudo nixos-install --flake "github:CerealKillerJohn/nixos/${git_rev:-main}#$host"
+sudo nixos-install --no-root-password --flake "github:CerealKillerJohn/dotfiles/${git_rev:-main}#$host"
