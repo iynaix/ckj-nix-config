@@ -25,7 +25,7 @@
   home = {
     file = {
       "/home/jwrhine/.librewolf/ca1rhbaa.default/" = {
-        source = ./Chrome;
+        source = ./chrome;
         recursive = true;
         # text = ''<the content of the file here''; if you want nix to create the file
       };
