@@ -33,11 +33,11 @@
     };
   };
   
-  environment = {
-    etc."NetworkManager/system-connections" = {
-      source = "/persist/etc/NetworkManager/system-connections/";
-    };
-  };  
+#  environment = {
+#    etc."NetworkManager/system-connections" = {
+#      source = "/persist/etc/NetworkManager/system-connections/";
+#    };
+#  };  
 
   networking = {
     hostName = "latitude";
