@@ -47,6 +47,26 @@
     # };  
   };
 
+#  services = {
+#    xserver = {
+#      displayManager = {
+#        autoLogin = {
+#	  user = "jwrhine";
+#        };
+#      };
+#    };  
+#    getty = {
+#      autologinUser = "jwrhine";
+#    };	
+#  };
+
+#  systemd = {
+#    services = {
+#      "getty@tty1".enable = false; # fixes autologin with gdm
+#      "autovt@tty1".enable = false; # https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
+#    };
+#  };
+
   hardware = {
     bluetooth = {
       enable = true;
@@ -57,5 +77,25 @@
     impermanence = {
       enable = true;
     };
-  };  
+  };
+
+  users = {
+    mutableUsers = false;
+    users = {
+ #     root = {
+ #       hashedPasswordFile = config.sops.secrets.rp.path;
+ #     };  
+      jwrhine = {
+        isNormalUser = true;
+        description = "John";
+        extraGroups = [
+          "wheel"
+	  "networkmanager"
+        ];
+#	initialPassword = "password";
+        hashedPasswordFile = config.sops.secrets.userpassword.path;
+        packages = with pkgs; [];
+      };
+    };
+  };
 }
