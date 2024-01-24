@@ -1,15 +1,16 @@
-{ config, pkgs, lib, ... }:
-
 {
-  imports =
-    [ 
-      ./default.nix
-      ./hardware-configuration.nix
-      ./intel-zfs.nix
-      ./impermanence.nix
-      ./packages.nix
-      ../../modules/nixos/persistence.nix
-    ];
+  config,
+  pkgs,
+  lib,
+  ...
+}: {
+  imports = [
+    ./default.nix
+    ./hardware-configuration.nix
+    ./intel-zfs.nix
+    ./impermanence.nix
+    ./packages.nix
+  ];
 
   boot = {
     loader = {
@@ -31,27 +32,27 @@
       theme = "breeze";
     };
   };
-  
+
   networking = {
     hostName = "latitude";
     # proxy = {
-      # default = "http://user:password@proxy:port/";
-      # noProxy = "127.0.0.1,localhost,internal.domain";
-    # };  
+    # default = "http://user:password@proxy:port/";
+    # noProxy = "127.0.0.1,localhost,internal.domain";
+    # };
   };
 
-#  services = {
-#    xserver = {
-#      displayManager = {
-#        autoLogin = {
-#	  user = "jwrhine";
-#        };
-#      };
-#    };  
-#    getty = {
-#      autologinUser = "jwrhine";
-#    };	
-#  };
+  #  services = {
+  #    xserver = {
+  #      displayManager = {
+  #        autoLogin = {
+  #	  user = "jwrhine";
+  #        };
+  #      };
+  #    };
+  #    getty = {
+  #      autologinUser = "jwrhine";
+  #    };
+  #  };
 
   systemd = {
     services = {
@@ -68,20 +69,7 @@
 
   custom = {
     impermanence = {
-      enable = true;
-    };
-  };
-
-  users = {
-    mutableUsers = false;
-    users = {
- #     root = {
- #       hashedPasswordFile = config.sops.secrets.rp.path;
- #     };  
-      jwrhine = {
-	initialPassword = "password";
-        # hashedPasswordFile = config.sops.secrets.userpassword.path;
-      };
+      enable = false;
     };
   };
 }

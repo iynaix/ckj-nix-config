@@ -1,6 +1,9 @@
-{ pkgs, inputs, config, ... }:
-
 {
+  pkgs,
+  inputs,
+  config,
+  ...
+}: {
   sops = {
     defaultSopsFile = ../hosts/secrets.yaml;
     defaultSopsFormat = "yaml";
@@ -8,14 +11,17 @@
       keyFile = "/home/jwrhine/.config/sops/age/keys.txt";
     };
     secrets = {
-#      example-key = { };
-      tailscale = { 
+      #      example-key = { };
+      tailscale = {
         owner = "jwrhine";
       };
-      userpassword = {
+      rp = {
         neededForUsers = true;
-      };	
-#      "myservice/my_subdir/my_secret" = { }
+      };
+      up = {
+        neededForUsers = true;
+      };
+      #      "myservice/my_subdir/my_secret" = { }
     };
-  };  
-}  
+  };
+}
