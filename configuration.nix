@@ -47,6 +47,13 @@
       xkbVariant = "";
       # remove xterm by default
       excludePackages = [pkgs.xterm];
+      displayManager = {
+        sessionCommands = ''
+	  if command -v feh >/dev/null; then
+	    feh --randomize --bg-fill ~/Pictures/Wallpapers/*
+	  fi
+        '';
+      };	
     };  
   };
 
