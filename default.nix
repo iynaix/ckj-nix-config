@@ -3,6 +3,7 @@ _: {
     ./home-manager/shell/aliases.nix
     ./home-manager/shell/zsh.nix
     ./hosts/packages.nix
+    ./modules/internet-background/default.nix
     ./nixos/audio.nix
     ./nixos/fonts.nix
     ./nixos/git.nix

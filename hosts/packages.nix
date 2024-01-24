@@ -15,6 +15,7 @@
     systemPackages = with pkgs; [
       cbonsai
       fastfetch
+      feh
       firefox
       kitty
       lm_sensors
