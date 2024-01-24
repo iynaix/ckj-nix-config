@@ -1,18 +1,13 @@
 { config, pkgs, lib, ... }:
 
 {
+  imports =
+    [ 
+      ./gdm.nix
+    ];
+
   services = {
-    udev = {
-      packages = with pkgs; [ 
-        gnome.gnome-settings-daemon 
-        ];
-      };
     xserver = {
-      displayManager = {
-        gdm = {
-          enable = true;
-        };
-      };	
       desktopManager = {
         gnome = {
           enable = true;
