@@ -26,11 +26,11 @@
         enable = true;
       };
     };
-    kernelParams = ["quiet"];
-    plymouth = {
-      enable = true;
-      theme = "breeze";
-    };
+    # kernelParams = ["quiet"];
+    # plymouth = {
+    #   enable = true;
+    #   theme = "breeze";
+    # };
   };
 
   networking = {
@@ -70,6 +70,18 @@
   custom = {
     impermanence = {
       enable = false;
+    };
+  };
+
+  users = {
+    mutableUsers = false;
+    users = {
+      root = {
+        initialPassword = "password";
+      };
+      jwrhine = {
+        initialPassword = "password";
+      };
     };
   };
 }

@@ -14,6 +14,8 @@
     initrd.kernelModules = [];
     kernelModules = ["kvm-intel"];
     extraModulePackages = [];
+    # doesnt work with by-id
+    zfs.devNodes = "/dev/disk/by-partuuid";
   };
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking

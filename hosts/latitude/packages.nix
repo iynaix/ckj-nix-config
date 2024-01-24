@@ -1,43 +1,46 @@
-{ config, pkgs, lib, ... }:
-
 {
+  config,
+  pkgs,
+  lib,
+  ...
+}: {
   environment = {
     systemPackages = with pkgs; [
       acpi
       arc-theme
-      breeze-plymouth
+      # breeze-plymouth
       brightnessctl
       btop
-      (callPackage ../../nixos/spotify-adblock.nix {})
-      cmatrix
-      espanso-wayland
-      floorp
-      fractal
-      gimp
+      # (callPackage ../../nixos/spotify-adblock.nix {})
+      # cmatrix
+      # espanso-wayland
+      # floorp
+      # fractal
+      # gimp
       glib
-      ifuse
+      # ifuse
       jq
       killall
-      libimobiledevice
+      # libimobiledevice
       libnotify
-      librewolf
-      mpv
-      nix-ld
-      parsec-bin
+      # librewolf
+      # mpv
+      # nix-ld
+      # parsec-bin
       pkgs.python311Full
-      plymouth
+      # plymouth
       ranger
       sops
-      spotify
-      spotifywm
-      swappy
-      usbmuxd
-      webcord
+      # spotify
+      # spotifywm
+      # swappy
+      # usbmuxd
+      # webcord
       wl-clipboard
       wlogout
       wlr-randr
-      wofi
-      zoom-us
-      ];
+      # wofi
+      # zoom-us
+    ];
   };
 }

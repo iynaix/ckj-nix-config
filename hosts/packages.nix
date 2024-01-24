@@ -1,21 +1,24 @@
-{ config, pkgs, lib, ... }:
-
 {
+  config,
+  pkgs,
+  lib,
+  ...
+}: {
   programs = {
     nano = {
       enable = false;
     };
   };
-  
+
   environment = {
     variables = {
-     EDITOR = "nvim";
+      EDITOR = "nvim";
     };
-    shells = with pkgs; [ zsh ];
+    shells = with pkgs; [zsh];
     systemPackages = with pkgs; [
-      cbonsai
-      fastfetch
-      firefox
+      # cbonsai
+      # fastfetch
+      # firefox
       kitty
       lm_sensors
       lsd

@@ -15,14 +15,11 @@
     };
 
     users = {
-      mutableUsers = false;
       users = {
         root = {
-          initialPassword = "password";
           hashedPasswordFile = config.sops.secrets.rp.path;
         };
         jwrhine = {
-          initialPassword = "password";
           hashedPasswordFile = config.sops.secrets.up.path;
         };
       };
