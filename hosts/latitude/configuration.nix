@@ -8,7 +8,6 @@
       ./intel-zfs.nix
       ./impermanence.nix
       ./packages.nix
-      ../../modules/nixos/persistence.nix
     ];
 
   boot = {
@@ -53,12 +52,12 @@
 #    };	
 #  };
 
-  systemd = {
-    services = {
-      "getty@tty1".enable = false; # fixes autologin with gdm
-      "autovt@tty1".enable = false; # https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
-    };
-  };
+#  systemd = {
+#    services = {
+#      "getty@tty1".enable = false; # fixes autologin with gdm
+#      "autovt@tty1".enable = false; # https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
+#    };
+#  };
 
   hardware = {
     bluetooth = {
@@ -75,12 +74,11 @@
   users = {
     mutableUsers = false;
     users = {
- #     root = {
- #       hashedPasswordFile = config.sops.secrets.rp.path;
- #     };  
+      root = {
+        initialPassword = "password";
+      };  
       jwrhine = {
 	initialPassword = "password";
-        # hashedPasswordFile = config.sops.secrets.userpassword.path;
       };
     };
   };

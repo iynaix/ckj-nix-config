@@ -1,27 +1,27 @@
 { config, pkgs, lib, ... }:
 
 {
-# booting with zfs
-boot = {
-  supportedFilesystems = ["zfs"];
-  zfs.devNodes = lib.mkDefault "/dev/disk/by-id";
-  kernelPackages = config.boot.zfs.package.latestCompatibleLinuxPackages;
-  zfs.requestEncryptionCredentials = true;
-};
+  # booting with zfs
+  boot = {
+    supportedFilesystems = ["zfs"];
+    zfs.devNodes = lib.mkDefault "/dev/disk/by-id";
+    kernelPackages = config.boot.zfs.package.latestCompatibleLinuxPackages;
+    zfs.requestEncryptionCredentials = true;
+  };
 
-networking.hostId = "60cbcd2b"; # required for zfs
+  networking.hostId = "60cbcd2b"; # required for zfs
 
-services.zfs = {
-  autoScrub.enable = true;
-  trim.enable = true;
-};
+  services.zfs = {
+    autoScrub.enable = true;
+    trim.enable = true;
+  };
 
-# 16GB swap
-swapDevices = [
-  {device = "/dev/disk/by-label/SWAP";}
-];
+  # 16GB swap
+  swapDevices = [
+    {device = "/dev/disk/by-label/SWAP";}
+  ];
 
-fileSystems = {
+  fileSystems = {
     "/boot" = {
       device = "/dev/disk/by-label/NIXBOOT";
       fsType = "vfat";
@@ -46,6 +46,7 @@ fileSystems = {
     "/home" = {
       device = "zroot/home";
       fsType = "zfs";
+      neededForBoot = true;
     };
 
     "/persist" = {

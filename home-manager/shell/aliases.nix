@@ -40,10 +40,15 @@
 
       doom-up="~/.config/emacs/bin/doom upgrade";
       
+      # NixOS Generation Commands
+
+      gen-list="sudo nix-env --list-generations --profile /nix/var/nix/profiles/system";
+      gen-del="sudo nix-env --delete-generations --profile /nix/var/nix/profiles/system";
+
       # Flake Commands
 
       flake="v nixos/flake.nix";
-      flake-up="cd ~/dotfiles; nix flake update; cd ~";
+      flake-up="cd ~/dotfiles; nix flake update";
       
       # Desktop Commands
 
