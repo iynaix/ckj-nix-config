@@ -39,18 +39,18 @@
     # };  
   };
 
-#  services = {
-#    xserver = {
-#      displayManager = {
-#        autoLogin = {
-#	  user = "jwrhine";
-#        };
-#      };
-#    };  
-#    getty = {
-#      autologinUser = "jwrhine";
-#    };	
-#  };
+  services = {
+    xserver = {
+      displayManager = {
+        autoLogin = {
+	  user = "jwrhine";
+        };
+      };
+    };  
+    getty = {
+      autologinUser = "jwrhine";
+    };	
+  };
 
   hardware = {
     bluetooth = {
