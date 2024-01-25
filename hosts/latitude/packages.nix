@@ -25,6 +25,7 @@
       librewolf
       mpv
       nix-ld
+      obs-studio
       parsec-bin
       pkgs.python311Full
       plymouth

@@ -5,7 +5,6 @@
     [ 
       ./default.nix
       ./hardware-configuration.nix
-      ./home.nix
       ./intel-zfs.nix
       ./impermanence.nix
       ./packages.nix
