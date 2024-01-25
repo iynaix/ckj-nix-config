@@ -12,6 +12,7 @@
       (callPackage ../../packages/boxbuddyrs/boxbuddyrs.nix {})
       cmatrix
       distrobox
+      docker
       espanso-wayland
       floorp
       fractal
