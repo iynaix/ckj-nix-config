@@ -7,10 +7,4 @@ _: {
     ../../nixos/virt-manager.nix
 #    ../../nixos/xfce.nix
   ];
-
-  programs = {
-    obs-studio = {
-      enable =  true;
-    };
-  };  
 }
