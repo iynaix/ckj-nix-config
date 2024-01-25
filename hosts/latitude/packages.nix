@@ -8,7 +8,8 @@
       breeze-plymouth
       brightnessctl
       btop
-      (callPackage ../../nixos/spotify-adblock.nix {})
+      (callPackage ../../modules/nixos/spotify-adblock.nix {})
+      (callPackage ../../packages/boxbuddyrs/boxbuddyrs.nix {})
       cmatrix
       espanso-wayland
       floorp
