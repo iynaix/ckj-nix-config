@@ -8,6 +8,7 @@ _: {
     ./nixos/git.nix
     ./nixos/nh.nix
     ./nixos/nix.nix
+    ./nixos/nixvim.nix
     ./nixos/printing.nix
     ./nixos/sops.nix
     ./nixos/tailscale.nix
