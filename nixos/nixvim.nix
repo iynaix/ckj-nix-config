@@ -16,6 +16,9 @@
         nvim-autopairs = {
           enable = true;
         };
+        treesitter = {
+          enable = true;
+        };
       };  
     };
   };  
