@@ -1,0 +1,228 @@
+{
+
+"layer": "top", // Waybar at top layer
+// "position": "bottom", // Waybar position (top|bottom|left|right)
+"height": 30, // Waybar height (to be removed for auto height)
+// "width": 1280, // Waybar width
+"spacing": 4, // Gaps between modules (4px)
+
+// Choose the order of the modules
+
+	"modules-left": [
+		"idle_inhibitor",
+		"wlr/workspaces",
+		"custom/weather"],
+		// "custom/weather#2"],
+					
+	"modules-center": [
+		"custom/media",
+		"pulseaudio#input",
+		"mpd"],
+				
+	"modules-right": [
+		"custom/pacman",
+		"custom/protonmail",
+		"pulseaudio#output",
+		// "cpu",
+		// "memory",
+		// "temperature",
+		// "backlight",
+		// "keyboard-state",
+		"battery",
+		"network",
+		"tray",
+		"custom/spacer"],
+
+
+// Modules-Left
+
+
+	"idle_inhibitor": {
+		"format": "{icon}",
+		"format-icons": {
+			"activated": "🛎️",
+			"deactivated": "💤"}
+		},
+
+	"wlr/workspaces": {
+		"on-click": "activate",
+		"disable-scroll": true,
+		"all-outputs": true,
+		"sort-by-number": true,
+		"format": "{icon}",
+			"format-icons": {
+				"1": "🌐",
+				"2": "📬",
+				"3": "🏢",
+				"4": "🎮",
+				"5": "📹",
+				"6": "📥",
+				"7": "📂",
+				"8": "☢️",
+				"9": "🍓",
+				"10": "💬",
+				"11": "🏘️",
+				"12": "⚙️",
+				"urgent": "🔥",
+				"focused": "😊",
+				"default": "💀"}
+		},
+
+	"custom/weather": {
+    		"format": "🌡️ {}",
+    		"format-alt": "{alt}",
+    		"format-alt-click": "click-right",
+    		"interval": 900,
+    		"return-type": "json",
+    		"exec": "~/.config/waybar/scripts/weather.sh",
+    		"exec-if": "ping openweathermap.org -c1",
+    		"signal": 8,
+  		"on-click": "xdg-open https://weather.com/weather/today/l/e2371cb05425e981729a3d809db97817be9f2e5b8708d80683ab4630b4a04c54"},
+
+	
+// Modules-Center
+
+
+	"custom/media": {
+        	"format": "{icon} {} {icon}",
+        	"return-type": "json",
+        	"max-length": 800,
+        	"format-icons": {
+			"nuclear": "☢️",
+			"spotify": "",
+			"strawberry": "🍓",
+            		"default": "🌐"},
+		"on-click": "playerctl play-pause",
+		"on-click-right": "pamixer -t",
+    		"on-scroll-up": "playerctl next",
+    		"on-scroll-down": "playerctl previous",
+        	"escape": true,
+		"exec": "mediaplayer.py --player nuclear 2> /dev/null"}, // mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+
+	"pulseaudio#input":{
+		"format-source": "🎙️🎙️🎙️ LIVE MIC @ {volume}% VOLUME!!🎙️🎙️🎙️",
+		"format-source-muted": "",
+		"format": "{format_source}"},
+
+	"mpd": {
+		"format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+		"format-disconnected": "Disconnected ",
+		"format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+		"unknown-tag": "N/A",
+		"interval": 2,
+		"consume-icons": {
+			"on": " "},
+		"random-icons": {
+			"off": "<span color=\"#f53c3c\"></span> ",
+			"on": " "},
+		"repeat-icons": {
+			"on": " "},
+		"single-icons": {
+			"on": "1 "},
+		"state-icons": {
+			"paused": "",
+			"playing": ""},
+		"tooltip-format": "MPD (connected)",
+		"tooltip-format-disconnected": "MPD (disconnected)"},
+
+
+// Modules-Right
+
+
+	"custom/pacman": {
+		"format": "📦 {}",
+		"interval": 3600,	// every hour
+  		"exec": "checkupdates | wc -l",		// # of updates
+  		"exec-if": "exit 0",	// always running; consider advanced run conditions
+  		"on-click": "kitty -e bash -c 'sudo pacman -Syu --devel'; pkill -SIGRTMIN+8 waybar",	// update system
+  		"on-click-right": "kitty -e bash -c 'sudo pacman -Qtdq | sudo pacman -Rns -'",	// remove orphans from system
+  		"signal": 8},
+
+
+	"custom/protonmail": {
+		"exec": "bar-protonmail -b '📧' -s message-new-instant",
+		"return-type": "json",
+		"interval": 10,
+		"tooltip": false,
+		"on-click": "xdg-open https://mail.proton.me/u/0/inbox"},
+
+	"pulseaudio#output": {
+		"format": "{icon}",
+		"format-muted": "🔇",
+		"format-bluetooth": "{icon}",
+		"format-bluetooth-muted": "{icon} MUTED ",
+		"on-click": "pamixer -t",
+		"on-click-right": "pavucontrol",
+		"format-icons": {
+			"headphone": "🎧",
+			"hands-free": "🎧",
+			"headset": "🎧",
+			"phone": "📞",
+			"portable": "📱",
+			"car": "🚗",
+			"default": ["🔈", "🔉", "🔊"]}
+		},
+
+	"cpu": {
+		"format": "💻 {usage}%",
+		"tooltip": true},
+
+	"memory": {
+		"format": "🐏 {}%",
+		"tooltip": true},
+
+	"temperature": {
+		// "thermal-zone": 2,
+		// "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+		"critical-threshold": 80,
+		// "format-critical": "{icon} {temperatureC}°C",
+		"format": "{icon} {temperatureC}°C",
+		"format-icons": ["🌡️"]},
+
+	"backlight": {
+		"device": "intel_backlight",
+		"format": "{icon} {percent}%",
+		"format-icons": ["🔅", "🔆"]},
+
+	"keyboard-state": {
+		"numlock": true,
+		"capslock": true,
+		"format": "{name} {icon}",
+		"format-icons": {
+			"locked": "🔒",
+			"unlocked": "🔓"}
+		},
+
+	"battery": {
+		"states": {
+			"good": 95,
+			"warning": 30,
+			"critical": 15},
+		"format": "{icon} {capacity}%",
+			// "format-full": "🔌",
+			"format-full": "",
+			"format-good": "🔋{capacity}%",
+			"format-discharging": "🪫    {capacity}%",
+			"format-charging": "🔋🔌    {capacity}%",
+		"format-alt": "{icon} {time}",},
+
+	"network": {
+		"family": "ipv4",
+		"interval": 15,
+		"format": "{icon}",
+		"tooltip-format": "🖥️ {ifname} via {ipaddr}\n📡 {essid} ( {signalStrength}% )",
+		"format-icons": {
+			"ethernet": "🖥️",
+			"wifi": "📡",
+			"linked": "📡 {ifname} (No IP)",
+			"disconnected": "⚠️ Disconnected ⚠️"}
+		},
+
+	"tray": {
+		"icon-size": 13,
+		"spacing": 8},
+
+	"custom/spacer": {
+		"format": " ",
+		"tooltip": false}
+}

@@ -1,0 +1,60 @@
+#! /bin/sh
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+$HOME/.config/scripts/autostart.sh
+bspc config external_rules_command ~/.config/bspwm/scripts/spotify.sh
+
+bspc monitor -g 1366x768
+bspc monitor -d 1 2 3 4 5 6 7 8 9 10 11 12
+
+bspc config border_width			2
+bspc config borderless_monocle			true
+bspc config focus_follows_pointer		true
+bspc config gapless_monocle			true
+bspc config merge_overlapping_monitors		true
+bspc config pointer_action1			move
+bspc config pointer_action2			resize_side
+bspc config pointer_action3			resize_corner
+bspc config pointer_modifier			mod4
+bspc config remove_disabled_monitors		true
+bspc config single_monocle			true
+bspc config split_ratio				0.6
+bspc config window_gap				5
+
+bspc config active_border_color                 "#000000"
+bspc config focused_border_color                "#A5ACAF"
+bspc config normal_border_color                 "#808080"
+bspc config presel_feedback_color               "#A5ACAF"
+#bspc config urgent_border_color                "#FF0000"
+
+bspc rule -a polybar private
+
+bspc rule -a firefox desktop='^1' follow=on
+bspc rule -a librewolf-default desktop='^2' follow on
+bspc rule -a Mailspring desktop='^2' follow=on
+bspc rule -a Soffice desktop='^3' follow=on
+bspc rule -a Gnucash desktop='^3' state=floating follow=on
+bspc rule -a Steam desktop='^4' state=floating follow=on
+bspc rule -a zoom desktop='^5' state=floating follow=on
+bspc rule -a Transmission-gtk desktop='^6' follow=on
+bspc rule -a "pcloud" desktop='^7' state=floating follow=on
+bspc rule -a "org.gnome.Nautilus" desktop='^7' follow=on
+bspc rule -a Spotify desktop='^8' follow=on
+bspc rule -a Rhythmbox desktop='^9' follow=on
+bspc rule -a strawberry desktop='^9' follow=on
+bspc rule -a discord desktop='^10' follow=on
+bspc rule -a "Nxplayer.bin" desktop='^11' follow=on
+bspc rule -a "org.remmina.Remmina" desktop='^11' follow=on
+bspc rule -a "parsecd" desktop='^11' follow=on
+bspc rule -a "Remote Utilities Viewer" desktop='^11' state=floating follow=on
+bspc rule -a "TeamViewer" desktop='^11' state=floating follow=on
+bspc rule -a baobab desktop='^12' follow=on
+bspc rule -a "gnome-control-center" desktop='^12' follow=on
+bspc rule -a Gnome-disks desktop='^12' follow=on
+bspc rule -a gnome-logs desktop='^12' follow=on
+bspc rule -a gnome-system-monitor desktop='^12' follow=on
+bspc rule -a "org.gnome.Software" desktop='^12' follow=on
+
+bspc rule -a "org.gnome.Calendar" state=floating
+bspc rule -a "org.gnome.Calculator" state=floating
+

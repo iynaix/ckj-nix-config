@@ -1,0 +1,76 @@
+# Bigger Window
+super + alt + {Down,Left,Right,Up}
+	bspc node -z {bottom 0 20,left -20 0,right 20 0,top 0 -20}
+
+# Brightness Controls
+XF86MonBrightness{Down,Up}
+	xbacklight -{dec,inc} 5
+
+# Close / Kill Programs
+super + {_,shift + }q
+	if xprop -id $(bspc query -N focused) | grep -i "^WM_CLASS.*mailspring"; then \
+		bspc node -k; \
+		mailspring --background %U; \
+	else \
+		bspc node -{c,k}; \
+	fi
+
+# Email
+super + e
+        mailspring
+
+# Focus / Send To Workspaces
+super + {_,shift + }{1-9,0,minus,equal}
+	bspc {desktop -f,node -d} '^{1-9,10,11,12}'
+
+# Move Floating Window
+super + {Down,Left,Right,Up}
+	bspc node -z {0 20,-20 0,20 0,0 -20}
+
+# Program Menu
+super + @space
+	rofi -modi drun -show drun -line-padding 4 \
+                -columns 2 -padding 50 -hide-scrollbar -terminal alacritty \
+                -show-icons -drun-icon-theme "Arc-X-D" -font "Droid Sans Regular 10"
+
+# Quit / Restart BSPWM
+super + alt + {q,r}
+	bspc {quit,wm -r}
+
+# Reload SXHKD
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# Screenshot
+Print
+        flameshot gui
+
+# Smaller Window
+super + shift + {Down,Left,Right,Up}
+	bspc node -z {top 0 20,right -20 0,left 20 0,bottom 0 -20}
+
+# Terminal Emulator
+super + Return
+	alacritty
+
+# Update System
+super + u
+	alacritty -e bash -c 'sudo dnf upgrade -y --refresh && sudo flatpak update -y; bash'
+
+# Volume Controls
+XF86Audio{LowerVolume,Mute,RaiseVolume}
+	amixer -q set Master {3%- unmute,toggle,3%+ unmute}
+
+# Web Browser
+super + w
+        firefox
+	#flatpak run org.mozilla.firefox
+
+# Window Class
+super + x
+        alacritty -e bash -c 'xprop WM_CLASS; bash'
+
+# Window State
+super + {f,shift + f,shift + t,t}
+	bspc node -t {floating,fullscreen,pseudo_tiled,tiled}
+
