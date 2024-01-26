@@ -9,9 +9,8 @@
       brightnessctl
       btop
       (callPackage ../../modules/nixos/spotify-adblock.nix {})
-      (callPackage ../../packages/boxbuddyrs/boxbuddyrs.nix {})
+#      (callPackage ../../packages/boxbuddyrs/boxbuddyrs.nix {})
       cmatrix
-      distrobox
       espanso-wayland
       floorp
       fractal
