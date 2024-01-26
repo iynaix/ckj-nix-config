@@ -18,7 +18,7 @@
       ll="lsd -l";
       la="lsd -a";
       lal="lsd -al";
-      tree="lsd -a --tree"
+      tree="lsd -a --tree";
      
       # Show Contents of .Config Directory
 
