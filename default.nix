@@ -1,7 +1,7 @@
 _: {
   imports = [
     ./home-manager/shell/aliases.nix
-    ./home-manager/shell/zsh.nix
+#    ./home-manager/shell/zsh.nix
     ./hosts/packages.nix
     ./nixos/audio.nix
     ./nixos/fonts.nix
