@@ -3,10 +3,6 @@
 {
   xdg = {
     configFile = {
-      "autostart" = {
-        source = ./autostart;
-        recursive = true;
-      };
       "bspwm" = {
         source = ./bspwm;
         recursive = true;
