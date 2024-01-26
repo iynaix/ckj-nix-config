@@ -43,10 +43,6 @@
         source = ./neofetch;
         recursive = true;
       };
-      "nvim" = {
-        source = ./nvim;
-        recursive = true;
-      };
       "polybar" = {
         source = ./polybar;
         recursive = true;
