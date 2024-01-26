@@ -22,7 +22,6 @@
       lsd
       mako
       neofetch
-      neovim
       # fix nix package count for nitch
       (pkgs.nitch.overrideAttrs (o: {
         patches = (o.patches or []) ++ [../overlays/nitch-nix-pkgs-count.patch];

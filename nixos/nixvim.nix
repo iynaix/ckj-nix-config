@@ -1,11 +1,22 @@
 {...}:
 
 {
-  programs.nixvim = {
-    enable = true;
-    defaultEditor = true;
-
-    colorschemes.gruvbox.enable = true;
-    plugins.lightline.enable = true;
-  };
+  programs = {
+    nixvim = {
+      enable = true;
+      colorschemes = {
+        gruvbox = {
+          enable = true;
+        };
+      };  
+      plugins = {
+        lightline = {
+          enable = true;
+        };
+        nvim-autopairs = {
+          enable = true;
+        };
+      };  
+    };
+  };  
 }
