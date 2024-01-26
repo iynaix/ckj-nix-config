@@ -5,6 +5,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     impermanence.url = "github:nix-community/impermanence";
+    nixvim = {
+      url = "github:nix-community/nixvim";
+    };
     nixpkgs.url = "github:Nixos/nixpkgs/nixos-unstable";
     sops-nix.url = "github:Mic92/sops-nix";
     # optional, not necessary for the module
@@ -32,7 +35,8 @@
           modules = [
 	    inputs.home-manager.nixosModules.home-manager
 	    inputs.impermanence.nixosModules.impermanence
-	    inputs.sops-nix.nixosModules.sops
+	    inputs.nixvim.nixosModules.nixvim
+            inputs.sops-nix.nixosModules.sops
             {
               home-manager = {
                 useGlobalPkgs = true;
