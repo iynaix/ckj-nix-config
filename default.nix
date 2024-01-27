@@ -1,6 +1,7 @@
 _: {
   imports = [
     ./home-manager/shell/aliases.nix
+    ./home-manager/shell/neovim/nixvim.nix
     ./home-manager/shell/zsh.nix
     ./hosts/packages.nix
     ./nixos/audio.nix
@@ -8,7 +9,6 @@ _: {
     ./nixos/git.nix
     ./nixos/nh.nix
     ./nixos/nix.nix
-    ./nixos/nixvim.nix
     ./nixos/printing.nix
     ./nixos/sops.nix
     ./nixos/tailscale.nix
