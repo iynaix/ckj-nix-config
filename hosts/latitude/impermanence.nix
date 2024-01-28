@@ -18,7 +18,7 @@
         jwrhine = {
 	  hashedPasswordFile = config.sops.secrets.up.path;
 	};
-      };	
+      };
     };
 
     environment.persistence."/persist" = {
@@ -26,10 +26,11 @@
       directories = [
         "/etc/NetworkManager/system-connections"
         "/etc/ssh"
-        "/var/log"
         # "/var/lib/bluetooth"
+        "/var/lib/docker"
         # "/var/lib/nixos"
         # "/var/lib/systemd/coredump"
+        "/var/log"
         # { directory = "/var/lib/colord"; user = "colord"; group = "colord"; mode = "u=rwx,g=rx,o="; }
       ];
       files = [
@@ -55,5 +56,5 @@
         ];
       };
     };
-  };  
+  };
 }

@@ -1,7 +1,7 @@
 _: {
   imports = [
     ../../modules/home-manager/default.nix
-#    ../../nixos/docker.nix
+    ../../nixos/docker.nix
     ../../nixos/gnome.nix
     ../../nixos/emacs.nix
     ../../nixos/flatpak.nix

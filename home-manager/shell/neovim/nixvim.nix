@@ -20,9 +20,10 @@
       register = "unnamedplus";
     };
 
-    colorschemes.catppuccin = {
+    colorschemes.gruvbox = {
       enable = true;
-      flavour = "mocha";
+      italicizeComments = true;
+      # flavour = "mocha";
       # transparentBackground = true;
     };
 
@@ -107,7 +108,6 @@
 #        ${config.custom.terminal.exec} -d "$dirname" ${lib.getExe pkgs.bash} -c "${lib.getExe pkgs.direnv} exec . nvim '$filename'"
 #      ''} %f";
 #    };
-
 #  };
 
 #  custom.persist = {
