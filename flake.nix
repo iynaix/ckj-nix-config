@@ -40,7 +40,7 @@
               home-manager = {
                 useGlobalPkgs = true;
                 useUserPackages = true;
-                extraSpecialArgs = {inherit host;};
+                extraSpecialArgs = {inherit host user;};
                 users.${user} = {
                   imports = [
                     inputs.nixvim.homeManagerModules.nixvim
