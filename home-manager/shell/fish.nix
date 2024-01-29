@@ -6,6 +6,7 @@
       enable = true;
     };
     kitty = {
+      enable = true;
       settings = {
         shell = "fish";
       };

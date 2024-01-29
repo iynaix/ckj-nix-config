@@ -16,8 +16,6 @@
       cbonsai
       fastfetch
       feh
-      firefox
-      kitty
       lm_sensors
       lsd
       mako
