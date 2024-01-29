@@ -4,6 +4,7 @@
   imports = [
   ./dunst.nix
   ./firefox.nix
+  ./mako.nix
   ./shell/default.nix
   ];
 
