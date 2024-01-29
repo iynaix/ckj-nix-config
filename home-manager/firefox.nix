@@ -4,6 +4,9 @@
   programs = {
     firefox= {
       enable = true;
+      preferences = {
+        "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+      };
       profiles = {
         ${user} = {
             userChrome = ''
