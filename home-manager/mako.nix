@@ -7,7 +7,7 @@
       font = "Iosevka Nerd Font 10";
       padding = "15";
       borderRadius = 10;
-      maxIconSize = "48";
+      maxIconSize = 48;
 
       # text-alignment=center;
 
