@@ -35,7 +35,7 @@
           modules = [
 	    inputs.home-manager.nixosModules.home-manager
 	    inputs.impermanence.nixosModules.impermanence
-	    inputs.nixvim.nixosModules.nixvim
+            inputs.nixvim.homeManagerModules.nixvim
             inputs.sops-nix.nixosModules.sops
             {
               home-manager = {
