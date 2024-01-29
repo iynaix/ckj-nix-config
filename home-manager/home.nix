@@ -18,10 +18,6 @@
         source = ./doom;
         recursive = true;
       };
-#      "dunst" = {
-#        source = ./dunst;
-#        recursive = true;
-#      };
       "fastfetch" = {
         source = ./fastfetch;
         recursive = true;
@@ -36,10 +32,6 @@
       };
       "i3status" = {
         source = ./i3status;
-        recursive = true;
-      };
-      "mako" = {
-        source = ./mako;
         recursive = true;
       };
       "neofetch" = {
