@@ -13,7 +13,7 @@
 
       defaultTimeout = "120";
       layer = "overlay";
-      anchor = "top-center"";
+      anchor = "top-center";
       backgroundColor = "#1e1e2ecc";
       textColor = "#CDD6F4";
       borderColor = "#89b4fa";
