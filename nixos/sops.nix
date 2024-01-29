@@ -11,16 +11,22 @@
     };
     secrets = {
 #      example-key = { };
-      tailscale = { 
+      tailscale = {
         owner = "jwrhine";
+      };
+      ar = {
+        neededForUsers = true;
+      };
+      gr = {
+        neededForUsers = true;
       };
       rp = {
         neededForUsers = true;
       };
       up = {
         neededForUsers = true;
-      };	
+      };
       # "myservice/my_subdir/my_secret" = { }
     };
-  };  
-}  
+  };
+}

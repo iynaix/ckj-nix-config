@@ -1,6 +1,5 @@
 _: {
   imports = [
-    ./hosts/packages.nix
     ./nixos/audio.nix
     ./nixos/fonts.nix
     ./nixos/git.nix

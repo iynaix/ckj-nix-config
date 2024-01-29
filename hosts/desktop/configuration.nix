@@ -2,7 +2,7 @@
 
 {
   imports =
-    [ 
+    [
       ./default.nix
       ./hardware-configuration.nix
       ./packages.nix
@@ -14,38 +14,32 @@
         enable = true;
 	device = "/dev/sda";
       };
-    };  
+    };
   };
 
   networking = {
     hostName = "desktop";
-    # proxy = {
-      # default = "http://user:password@proxy:port/";
-      # noProxy = "127.0.0.1,localhost,internal.domain";
-    # };  
   };
 
-  powerManagement = {
-    cpuFreqGovernor = "performance";
-  };  
+#  powerManagement = {
+#    cpuFreqGovernor = "performance";
+#  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users = { 
+  users = {
     users = {
       amreed = {
         isNormalUser = true;
         description = "Aiden";
-        extraGroups = [
-        ];
-        packages = with pkgs; [];
+        initialPassword = "password";
+	hashedPasswordFile = config.sops.secrets.ar.path;
       };
       gcreed = {
         isNormalUser = true;
         description = "Gavin";
-        extraGroups = [
-        ];
-        packages = with pkgs; [];
+        initialPassword = "password";
+	hashedPasswordFile = config.sops.secrets.gr.path;
       };
     };
   };
-} 
+}
