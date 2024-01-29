@@ -6,12 +6,12 @@
       enable = false;
     };
   };
-  
+
   environment = {
     variables = {
      EDITOR = "nvim";
     };
-    shells = with pkgs; [ zsh ];
+    shells = with pkgs; [ ];
     systemPackages = with pkgs; [
       cbonsai
       fastfetch
