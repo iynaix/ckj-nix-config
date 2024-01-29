@@ -29,7 +29,7 @@
 
           specialArgs = {
             inherit (nixpkgs) lib;
-            inherit inputs nixpkgs system user;
+            inherit inputs nixpkgs system user host;
           };
 
           modules = [
@@ -40,6 +40,7 @@
               home-manager = {
                 useGlobalPkgs = true;
                 useUserPackages = true;
+                extraSpecialArgs = {inherit host;};
                 users.${user} = {
                   imports = [
                     inputs.nixvim.homeManagerModules.nixvim

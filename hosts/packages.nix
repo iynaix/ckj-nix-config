@@ -11,7 +11,6 @@
     variables = {
      EDITOR = "nvim";
     };
-    shells = with pkgs; [ ];
     systemPackages = with pkgs; [
       cbonsai
       fastfetch

@@ -2,10 +2,9 @@
 
 {
   programs = {
-    fish = {
+    bash = {
       enable = true;
-      shellInit = ''
-        set fish_greeting
+      initExtra = ''
         nitch
         cat ~/.cache/wallust/sequences
       '';

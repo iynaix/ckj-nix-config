@@ -1,3 +1,5 @@
+{host, ...}:
+
 {
   home = {
     shellAliases = {
@@ -11,7 +13,6 @@
       gpull="git pull";
       gpush="git push";
       # Misc. Terminal Commands
-      "~"="cd";
       "."="cd ~/dotfiles";
       ".."="cd ..";
       conf="lsd ~/.config";
@@ -31,12 +32,9 @@
       flake-up="cd ~/dotfiles; nix flake update";
       gen-list="sudo nix-env --list-generations --profile /nix/var/nix/profiles/system";
       gen-del="sudo nix-env --delete-generations --profile /nix/var/nix/profiles/system";
-      home-dell="v ~/dotfiles/hosts/latitude/home.nix"; # Open home.nix file for Dell-Latitude
-      home-hp="v ~/dotfiles/hosts/desktop/home.nix"; # Open home.nix file for HP-Desktop
-      nc-dell="v ~/dotfiles/hosts/latitude/configuration.nix"; # Open configuration.nix file for Dell-Latitude
-      nc-hp="v ~/dotfiles/hosts/desktop/configuration.nix"; # Open configuration.nix file for HP-Desktop
-      nrs-dell="nh os switch --nom --hostname latitude"; # Run 'nixos-rebuild switch' for Dell-Latitude
-      nrs-hp="nh os switch --nom --hostname desktop"; # Run 'nixos-rebuild switch' for HP-Desktop
+      home="v ~/dotfiles/hosts/${host}/home.nix"; # Open home.nix file
+      nc="v ~/dotfiles/hosts/${host}/configuration.nix"; # Open configuration.nix file
+      nrs="nh os switch --nom --hostname ${host}"; # Run 'nixos-rebuild switch' using nh
       # Scripts
       ko="./dotfiles/scripts/kitty_opacity";
       pow="./dotfiles/scripts/powermenu.sh";

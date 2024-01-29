@@ -2,10 +2,7 @@
 
 {
   imports = [
-  ./shell/aliases.nix
-  ./shell/fish.nix
-  ./shell/neovim/nixvim.nix
-  # ./shell/zsh.nix
+  ./shell/default.nix
   ];
 
   xdg = {
@@ -36,10 +33,6 @@
       };
       "i3status" = {
         source = ./i3status;
-        recursive = true;
-      };
-      "kitty" = {
-        source = ./kitty;
         recursive = true;
       };
       "mako" = {
