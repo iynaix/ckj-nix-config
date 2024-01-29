@@ -1,6 +1,13 @@
 { config, pkgs, lib, ... }:
 
 {
+  imports = [
+  ./shell/aliases.nix
+  ./shell/fish.nix
+  ./shell/neovim/nixvim.nix
+  # ./shell/zsh.nix
+  ]
+
   xdg = {
     configFile = {
       "bspwm" = {
@@ -34,11 +41,11 @@
       "kitty" = {
         source = ./kitty;
         recursive = true;
-      };	
+      };
       "mako" = {
         source = ./mako;
         recursive = true;
-      };	
+      };
       "neofetch" = {
         source = ./neofetch;
         recursive = true;
@@ -72,7 +79,7 @@
         recursive = true;
       };
     };
-  };  
+  };
 
   home = {
     file = {
@@ -81,7 +88,7 @@
         # text = ''<the content of the file here''; if you want nix to create the file
       };
     };
-  };  
+  };
 
   home.stateVersion = "23.11";
 }
