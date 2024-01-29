@@ -16,10 +16,10 @@
         source = ./doom;
         recursive = true;
       };
-      "dunst" = {
-        source = ./dunst;
-        recursive = true;
-      };
+#      "dunst" = {
+#        source = ./dunst;
+#        recursive = true;
+#      };
       "fastfetch" = {
         source = ./fastfetch;
         recursive = true;
@@ -74,15 +74,6 @@
       };
     };
   };
-
-#  home = {
-#    file = {
-#      ".librewolf/ca1rhbaa.default/chrome/userChrome.css" = {
-#        source = ./chrome/userChrome.css;
-#        # text = ''<the content of the file here''; if you want nix to create the file
-#      };
-#    };
-#  };
 
   home.stateVersion = "23.11";
 }
