@@ -4,7 +4,7 @@
   programs = {
     firefox= {
       enable = true;
-      preferences = {
+      extraPrefs = {
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
       };
       profiles = {
