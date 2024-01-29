@@ -35,7 +35,6 @@
           modules = [
 	    inputs.home-manager.nixosModules.home-manager
 	    inputs.impermanence.nixosModules.impermanence
-            inputs.nixvim.homeManagerModules.nixvim
             inputs.sops-nix.nixosModules.sops
             {
               home-manager = {
@@ -43,6 +42,7 @@
                 useUserPackages = true;
                 users.${user} = {
                   imports = [
+                    inputs.nixvim.homeManagerModules.nixvim
                     # common home-manager configuration
                     ./home-manager/home.nix
                     # host specific home-manager configuration
