@@ -2,6 +2,7 @@
 
 {
   imports = [
+  ./firefox.nix
   ./shell/default.nix
   ];
 
@@ -74,14 +75,14 @@
     };
   };
 
-  home = {
-    file = {
-      ".librewolf/ca1rhbaa.default/chrome/userChrome.css" = {
-        source = ./chrome/userChrome.css;
-        # text = ''<the content of the file here''; if you want nix to create the file
-      };
-    };
-  };
+#  home = {
+#    file = {
+#      ".librewolf/ca1rhbaa.default/chrome/userChrome.css" = {
+#        source = ./chrome/userChrome.css;
+#        # text = ''<the content of the file here''; if you want nix to create the file
+#      };
+#    };
+#  };
 
   home.stateVersion = "23.11";
 }
