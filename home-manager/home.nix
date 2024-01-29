@@ -2,6 +2,7 @@
 
 {
   imports = [
+  ./dunst.nix
   ./firefox.nix
   ./shell/default.nix
   ];
