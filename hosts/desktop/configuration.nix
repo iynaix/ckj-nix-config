@@ -31,14 +31,12 @@
       amreed = {
         isNormalUser = true;
         description = "Aiden";
-        initialPassword = "password";
-	hashedPasswordFile = config.sops.secrets.ar.path;
+        initialPassword = "1415110";
       };
       gcreed = {
         isNormalUser = true;
         description = "Gavin";
-        initialPassword = "password";
-	hashedPasswordFile = config.sops.secrets.gr.path;
+        initialPassword = "240187";
       };
     };
   };
