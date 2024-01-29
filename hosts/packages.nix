@@ -17,7 +17,6 @@
       feh
       lm_sensors
       lsd
-      mako
       neofetch
       # fix nix package count for nitch
       (pkgs.nitch.overrideAttrs (o: {

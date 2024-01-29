@@ -34,6 +34,7 @@
       gen-del="sudo nix-env --delete-generations --profile /nix/var/nix/profiles/system";
       home="v ~/dotfiles/hosts/${host}/home.nix"; # Open home.nix file
       nc="v ~/dotfiles/hosts/${host}/configuration.nix"; # Open configuration.nix file
+      ncg="nix-collect-garbage -d"; # Collect Garbage
       nrb="cd ~/dotfiles; sudo nixos-rebuild boot --flake .#${host}"; # Run 'nixos-rebuild boot'
       nrs="nh os switch --nom --hostname ${host}"; # Run 'nixos-rebuild switch' using nh
       # Scripts

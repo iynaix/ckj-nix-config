@@ -22,7 +22,6 @@
       killall
       libimobiledevice
       libnotify
-      librewolf
       mpv
       nix-ld
       obs-studio
