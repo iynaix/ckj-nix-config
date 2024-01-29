@@ -4,9 +4,9 @@
   programs = {
     starship = {
       enable = true;
-      enableBashInteration = true;
-      enableFishInteration = true;
-      enableZshInteration = true;
+      enableBashIntegration = true;
+      enableFishIntegration = true;
+      enableZshIntegration = true;
       settings = { };
     };
   };
