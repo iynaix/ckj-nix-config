@@ -4,11 +4,13 @@
   programs = {
     firefox= {
       enable = true;
-      preferences = {
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
       };
       profiles = {
         ${user} = {
+          settings = {
+            "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+          };
             userChrome = ''
               @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
               #navigator-toolbox {
