@@ -5,7 +5,7 @@
     firefox= {
       enable = true;
       profiles = {
-        ${user} = {
+        "${user}" = {
             userChrome = ''
               @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
               #navigator-toolbox {
