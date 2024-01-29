@@ -8,7 +8,7 @@
         global = {
           follow = "mouse";
           notification_limit = "0";
-          transparency = "15"
+          transparency = "15";
           separator_height = "1";
           horizontal_padding = "10";
           frame_width = "0";
