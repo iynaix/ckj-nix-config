@@ -7,6 +7,7 @@ _:
     ./fish.nix
     ./kitty.nix
     ./neovim/nixvim.nix
+    ./starship.nix
     # ./zsh.nix
   ];
 }
