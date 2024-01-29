@@ -7,7 +7,7 @@
       profiles = {
         ${user} = {
           settings = {
-            "browser.startup.homepage" = "https//:mail.proton.me"
+            "browser.startup.homepage" = "https//:mail.proton.me";
             "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
           };
           userChrome = ''
