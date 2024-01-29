@@ -6,7 +6,7 @@
   ./shell/fish.nix
   ./shell/neovim/nixvim.nix
   # ./shell/zsh.nix
-  ]
+  ];
 
   xdg = {
     configFile = {
