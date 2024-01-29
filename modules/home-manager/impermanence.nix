@@ -1,5 +1,10 @@
 {lib, ...}: {
   options.custom.persist = {
+    root = {
+      directories = lib.mkOption {
+        default = [];
+        description = "Directories to persist in root directory";
+      };
     home = {
       directories = lib.mkOption {
         default = [];

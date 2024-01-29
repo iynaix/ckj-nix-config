@@ -8,9 +8,13 @@
     storageDriver = lib.mkIf (config.fileSystems."/".fsType == "zfs") "zfs";
   };
 
-#  custom.persist = {
-#    home.directories = [
-#      "/var/lib/docker" # docker directory
-#    ];
-#  };
+  custom = {
+    persist = {
+      root = {
+        directories = [
+          "/var/lib/docker" # docker directory
+        ];
+      };
+    };
+  };
 }
