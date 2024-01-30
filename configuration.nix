@@ -2,8 +2,8 @@
 
 {
   imports =
-    [ 
-      ./default.nix
+    [
+      ./nixos/default.nix
     ];
 
   boot = {
@@ -15,15 +15,15 @@
   networking = {
     networkmanager = {
       enable = true;
-    };  
+    };
     # wireless = {
       # enable = true;
-    # };  
+    # };
   };
 
   time = {
     timeZone = "America/New_York";
-  };  
+  };
 
   i18n = {
     defaultLocale = "en_US.UTF-8";
@@ -47,7 +47,7 @@
       xkbVariant = "";
       # remove xterm by default
       excludePackages = [pkgs.xterm];
-    };  
+    };
   };
 
   hardware = {
@@ -67,7 +67,7 @@
 	packages = with pkgs; [];
       };
     };
-  };  
+  };
 
   system = {
     # do not change this value
