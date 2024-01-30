@@ -1,7 +1,7 @@
 {host, ...}:
 
 {
-  home = {
+  environment = {
     shellAliases = {
       # Doom Emacs Upgrade
       doom-up="~/.config/emacs/bin/doom upgrade";
