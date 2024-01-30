@@ -31,12 +31,10 @@
       amreed = {
         isNormalUser = true;
         description = "Aiden";
-        initialPassword = "1415110";
       };
       gcreed = {
         isNormalUser = true;
         description = "Gavin";
-        initialPassword = "240187";
       };
     };
   };
