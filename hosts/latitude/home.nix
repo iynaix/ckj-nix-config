@@ -1,6 +1,5 @@
 _: {
   imports = [
-    ./hardware-configuration.nix
     ./impermanence.nix
     ./intel-zfs.nix
     ./packages.nix

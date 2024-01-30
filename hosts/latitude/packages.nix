@@ -8,7 +8,7 @@
       breeze-plymouth
       brightnessctl
       btop
-      (callPackage ../../modules/nixos/spotify-adblock.nix {})
+#      (callPackage ../../packages/bar-protonmail/bar-protonmail.nix {})
       (callPackage ../../packages/boxbuddyrs/boxbuddyrs.nix {})
       cbonsai
       cmatrix
