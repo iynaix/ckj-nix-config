@@ -1,4 +1,6 @@
-_: {
+_:
+
+{
   imports = [
     ./hardware-configuration.nix
     ./packages.nix

@@ -24,6 +24,7 @@
         gnome = {
           enable = true;
         };
+      };
     };
   };
 
