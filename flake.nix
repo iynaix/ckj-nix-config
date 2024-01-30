@@ -64,7 +64,7 @@
               };
             }
             # common configuration
-            ./configuration.nix
+            # ./configuration.nix
             # host specific configuration
             ./hosts/${host}/configuration.nix
             # host specific hardware configuration
