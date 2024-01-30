@@ -1,6 +1,6 @@
 _: {
   imports = [
-    ../../home-manager/shell/default.nix
+    ../../modules/home-manager/default.nix
     ../../nixos/xfce.nix
   ];
 }
