@@ -1,11 +1,6 @@
 { config, pkgs, lib, ... }:
 
 {
-  imports =
-    [
-      ./nixos/default.nix
-    ];
-
   boot = {
     tmp = {
       cleanOnBoot = true;
@@ -60,9 +55,9 @@
         isNormalUser = true;
 	description = "John";
 	extraGroups = [
-	  "networkmanager"
-	  "users"
-	  "wheel"
+	 "networkmanager"
+	 "users"
+	 "wheel"
 	];
 	packages = with pkgs; [];
       };

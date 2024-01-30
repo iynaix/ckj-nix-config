@@ -2,12 +2,8 @@
 
 {
   imports =
-    [ 
-      ./default.nix
-      ./hardware-configuration.nix
-      ./intel-zfs.nix
-      ./impermanence.nix
-      ./packages.nix
+    [
+      ./home.nix
     ];
 
   boot = {
@@ -30,13 +26,13 @@
       theme = "breeze";
     };
   };
-  
+
   networking = {
     hostName = "latitude";
     # proxy = {
       # default = "http://user:password@proxy:port/";
       # noProxy = "127.0.0.1,localhost,internal.domain";
-    # };  
+    # };
   };
 
   services = {
@@ -46,10 +42,10 @@
 	  user = "jwrhine";
         };
       };
-    };  
+    };
     getty = {
       autologinUser = "jwrhine";
-    };	
+    };
   };
 
   hardware = {
@@ -69,7 +65,7 @@
     users = {
       root = {
         initialPassword = "password";
-      };  
+      };
       jwrhine = {
 	initialPassword = "password";
       };

@@ -1,20 +1,32 @@
 { config, pkgs, lib, ... }:
 
 {
-  imports =
-    [ 
-      ./gdm.nix
-    ];
+  systemd = {
+    services = {
+      "getty@tty1".enable = false; # fixes autologin with gdm
+      "autovt@tty1".enable = false; # https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
+    };
+  };
 
   services = {
+    udev = {
+      packages = with pkgs; [
+        gnome.gnome-settings-daemon
+        ];
+      };
     xserver = {
+      displayManager = {
+        gdm = {
+          enable = true;
+        };
+      };
       desktopManager = {
         gnome = {
           enable = true;
         };
-      };
     };
   };
+
   environment = {
     systemPackages = with pkgs; [
       gnome.gnome-tweaks
