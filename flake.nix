@@ -49,6 +49,8 @@
                     ./home-manager/home.nix
                     # host specific home-manager configuration
                     ./hosts/${host}/home.nix
+                    # modules for home-manager
+                    ./modules/home-manager
                   ];
 
                   home = {
