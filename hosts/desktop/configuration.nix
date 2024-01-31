@@ -25,6 +25,7 @@
       amreed = {
         isNormalUser = true;
         description = "Aiden";
+        initialPassword = "password";
         hashedPasswordFile = config.sops.secrets.ar.path;
 	extraGroups = [];
 	packages = with pkgs; [];
@@ -32,6 +33,7 @@
       gcreed = {
         isNormalUser = true;
         description = "Gavin";
+        initialPassword = "password";
         hashedPasswordFile = config.sops.secrets.gr.path;
 	extraGroups = [];
 	packages = with pkgs; [];

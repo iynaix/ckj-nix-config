@@ -61,7 +61,6 @@
   };
 
   users = {
-    mutableUsers = false;
     users = {
       root = {
         initialPassword = "password";

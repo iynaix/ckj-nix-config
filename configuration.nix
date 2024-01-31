@@ -71,6 +71,7 @@
   };
 
   users = {
+    mutableUsers = false;
     users = {
       jwrhine = {
         isNormalUser = true;
