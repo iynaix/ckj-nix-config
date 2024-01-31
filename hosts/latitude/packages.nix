@@ -7,16 +7,11 @@
       arc-theme
       breeze-plymouth
       brightnessctl
-      btop
 #      (callPackage ../../packages/bar-protonmail/bar-protonmail.nix {})
       (callPackage ../../packages/boxbuddyrs/boxbuddyrs.nix {})
-      cbonsai
-      cmatrix
       distrobox
       espanso-wayland
-      fastfetch
       feh
-      floorp
       fractal
       gimp
       glib
@@ -26,27 +21,21 @@
       libimobiledevice
       libnotify
       lm_sensors
-      lsd
-      neofetch
       mpv
       nix-ld
       obs-studio
       parsec-bin
       # fix nix package count for nitch
-      (pkgs.nitch.overrideAttrs (o: {
-        patches = (o.patches or []) ++ [../../overlays/nitch-nix-pkgs-count.patch];
-      }))
+      #(pkgs.nitch.overrideAttrs (o: {
+      #  patches = (o.patches or []) ++ [../../overlays/nitch-nix-pkgs-count.patch];
+      #}))
       pkgs.python311Full
       plymouth
       ranger
-      sops
       spotify
       spotifywm
       swappy
       usbmuxd
-      wallust
-      webcord
-      wget
       wl-clipboard
       wlogout
       wlr-randr

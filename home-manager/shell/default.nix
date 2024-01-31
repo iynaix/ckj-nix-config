@@ -8,6 +8,6 @@ _:
     ./kitty.nix
     ./neovim
     ./starship.nix
-    ./zsh.nix
+#    ./zsh.nix
   ];
 }

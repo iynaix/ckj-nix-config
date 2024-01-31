@@ -53,6 +53,22 @@
     enableAllFirmware = true;
   };
 
+  environment = {
+    systemPackages = with pkgs; [
+      btop
+      cbonsai
+      cmatrix
+      fastfetch
+      floorp
+      lsd
+      neofetch
+      nitch
+      sops
+      wallust
+      webcord
+      wget
+    ];
+
   users = {
     users = {
       jwrhine = {

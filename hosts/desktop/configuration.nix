@@ -3,6 +3,8 @@
 {
   imports =
     [
+      ./packages.nix
+      ./xfce.nix
     ];
 
   boot = {

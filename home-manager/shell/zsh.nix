@@ -1,9 +1,9 @@
 { config, pkgs, lib, ... }:
 
 {
-  environment = {
-    shells = with pkgs; [ 
-      zsh 
+ home = {
+    shells = with pkgs; [
+      zsh
     ];
     systemPackages = with pkgs; [
       ];
@@ -33,7 +33,7 @@
         autoload -U compinit && compinit
         unsetopt menu_complete
         setopt completealiases
-  
+
   if [ -f ~/.aliases ]; then
     source ~/.aliases
   fi
