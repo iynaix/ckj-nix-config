@@ -4,6 +4,7 @@
   imports =
     [
       ./impermanence.nix
+      ./intel-zfs.nix
     ];
 
   boot = {

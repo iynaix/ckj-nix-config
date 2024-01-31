@@ -4,7 +4,6 @@ _: {
     ./emacs.nix
     ./flatpak.nix
     ./gnome.nix
-    ./intel-zfs.nix
     ./packages.nix
     ./steam.nix
     ./virt-manager.nix
