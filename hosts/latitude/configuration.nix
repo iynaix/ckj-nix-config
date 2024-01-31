@@ -3,7 +3,7 @@
 {
   imports =
     [
-      ./default.nix
+#      ./default.nix
     ];
 
   boot = {
