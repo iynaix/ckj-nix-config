@@ -3,7 +3,7 @@
 {
   imports = [
     ./nixos
-  ]
+  ];
 
   boot = {
     tmp = {
