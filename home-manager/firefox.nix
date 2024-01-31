@@ -10,10 +10,12 @@
           settings = {
             "browser.startup.homepage" = "fva.owschools.com";
           };
+        };
         gcreed = {
           settings = {
             "browser.startup.homepage" = "fva.owschools.com";
           };
+        };
         jwrhine = {
           settings = {
             "browser.startup.homepage" = "mail.proton.me";
