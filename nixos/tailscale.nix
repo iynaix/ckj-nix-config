@@ -2,7 +2,7 @@
 
 {
   # make the tailscale command usable to users
-  environment = {
+   environment = {
     systemPackages = with pkgs; [
       tailscale
     ];
@@ -40,7 +40,7 @@
       fi
 
       # otherwise authenticate with tailscale
-      ${tailscale}/bin/tailscale up -authkey "$(cat ${config.sops.secrets.tailscale.path})" 
+      ${tailscale}/bin/tailscale up -authkey "$(cat ${config.sops.secrets.tailscale.path})"
     '';
   };
 
@@ -57,5 +57,5 @@
     # allow you to SSH in over the public internet
     allowedTCPPorts = [ 22 ];
   };
-  
+
 }
