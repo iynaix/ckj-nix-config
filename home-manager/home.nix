@@ -2,10 +2,10 @@
 
 {
   imports = [
-  ./dunst.nix
-  ./firefox.nix
-  ./mako.nix
-  ./shell/default.nix
+    ./dunst.nix
+    ./firefox.nix
+    ./mako.nix
+    ./shell
   ];
 
   xdg = {
