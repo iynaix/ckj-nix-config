@@ -46,7 +46,7 @@
                   imports = [
                     inputs.nixvim.homeManagerModules.nixvim
                     # common home-manager configuration
-                    # ./home-manager/home.nix
+                    ./home-manager/home.nix
                     # host specific home-manager configuration
                     ./hosts/${host}/home.nix
                   ];

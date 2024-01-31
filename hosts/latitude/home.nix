@@ -3,7 +3,6 @@ _: {
     ./impermanence.nix
     ./intel-zfs.nix
     ./packages.nix
-    ../../home-manager/default.nix
     ../../modules/home-manager/default.nix
     ../../modules/nixos/default.nix
     ../../nixos/default.nix
