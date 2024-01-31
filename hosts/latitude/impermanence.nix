@@ -10,16 +10,16 @@
       options = ["defaults" "size=1G" "mode=755"];
     };
 
-    users = {
-      users = {
-        root = {
-	  hashedPasswordFile = config.sops.secrets.rp.path;
-	};
-        jwrhine = {
-	  hashedPasswordFile = config.sops.secrets.up.path;
-	};
-      };
-    };
+#    users = {
+#      users = {
+#        root = {
+#	  hashedPasswordFile = config.sops.secrets.rp.path;
+#	};
+#        jwrhine = {
+#	  hashedPasswordFile = config.sops.secrets.up.path;
+#	};
+#      };
+#    };
 
     environment.persistence."/persist" = {
       hideMounts = true;

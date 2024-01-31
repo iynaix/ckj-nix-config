@@ -60,14 +60,14 @@
     };
   };
 
-  users = {
-    users = {
-      root = {
-        initialPassword = "password";
-      };
-      jwrhine = {
-	initialPassword = "password";
-      };
-    };
-  };
+#  users = {
+#    users = {
+#      root = {
+#        initialPassword = "password";
+#      };
+#      jwrhine = {
+#	initialPassword = "password";
+#      };
+#    };
+#  };
 }
