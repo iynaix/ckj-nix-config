@@ -1,6 +1,10 @@
 { config, pkgs, lib, ... }:
 
 {
+  imports = [
+    ./nixos
+  ]
+
   boot = {
     tmp = {
       cleanOnBoot = true;
