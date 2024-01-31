@@ -46,7 +46,7 @@
 	};
         ovmf = {
 	  packages = [
-	    pkgs.OVMFFull.fd 
+	    pkgs.OVMFFull.fd
 	  ];
 	};
       };
@@ -59,5 +59,5 @@
     spice-vdagentd = {
       enable = true;
     };
-  };  
+  };
 }

@@ -3,8 +3,7 @@
 {
   imports =
     [
-      ./impermanence.nix
-      ./intel-zfs.nix
+      ./default.nix
     ];
 
   boot = {

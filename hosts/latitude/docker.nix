@@ -8,7 +8,7 @@
     storageDriver = lib.mkIf (config.fileSystems."/".fsType == "zfs") "zfs";
   };
 
-  custom = {
+  custom-nixos = {
     persist = {
       root = {
         directories = [
