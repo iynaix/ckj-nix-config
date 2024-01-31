@@ -68,6 +68,7 @@
       webcord
       wget
     ];
+  };
 
   users = {
     users = {
