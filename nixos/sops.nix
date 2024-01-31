@@ -14,6 +14,12 @@
       tailscale = {
         owner = "jwrhine";
       };
+      ar = {
+        neededForUsers = true;
+      };
+      gr = {
+        neededForUsers = true;
+      };
       rp = {
         neededForUsers = true;
       };
