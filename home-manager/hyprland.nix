@@ -32,7 +32,8 @@ _:
             }
 
             sensitivity = 0 # -1.0 - 1.0, 0 means no modification.
-}
+          }
+
           general {
             # See https://wiki.hyprland.org/Configuring/Variables/ for more
             gaps_in = 3
