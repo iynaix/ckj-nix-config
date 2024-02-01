@@ -8,7 +8,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    impermanence = [
+    impermanence = {
       url = "github:nix-community/impermanence";
     };
     nixvim = {
