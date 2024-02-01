@@ -16,6 +16,7 @@
       "."="cd ~/dotfiles";
       ".."="cd ..";
       conf="lsd ~/.config";
+      ext=''nix flake show "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons"'';
       la="lsd -a";
       lal="lsd -al";
       ll="lsd -l";

@@ -1,5 +1,9 @@
 {
   inputs = {
+    firefox-addons = {
+      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -42,7 +46,7 @@
               home-manager = {
                 useGlobalPkgs = true;
                 useUserPackages = true;
-                extraSpecialArgs = {inherit host user;};
+                extraSpecialArgs = {inherit host inputs user;};
                 users.${user} = {
                   imports = [
                     inputs.nixvim.homeManagerModules.nixvim

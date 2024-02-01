@@ -15,6 +15,10 @@
     networkmanager = {
       enable = true;
     };
+    # proxy = {}
+      # default = "http://user:password@proxy:port/";
+      # noProxy = "127.0.0.1,localhost,internal.domain";
+    # };
     # wireless = {
       # enable = true;
     # };
@@ -53,6 +57,12 @@
     enableAllFirmware = true;
   };
 
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
+    };
+  };
+
   environment = {
     systemPackages = with pkgs; [
       btop
@@ -63,6 +73,7 @@
       lsd
       neofetch
       nitch
+      ripgrep
       sops
       wallust
       webcord
