@@ -9,7 +9,6 @@
           extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
             bitwarden
             cookie-autodelete
-            darkreader #
             (enhancer-for-youtube.overrideAttrs {meta.license.free = true;})
             facebook-container #
             (grammarly.overrideAttrs {meta.license.free = true;}) #
