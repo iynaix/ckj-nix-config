@@ -73,6 +73,10 @@
       lsd
       neofetch
       nitch
+      # fix nix package count for nitch
+      (pkgs.nitch.overrideAttrs (o: {
+	patches = (o.patches or []) ++ [./patches/nitch-nix-pkgs-count.patch];
+      }))
       ripgrep
       sops
       wallust
