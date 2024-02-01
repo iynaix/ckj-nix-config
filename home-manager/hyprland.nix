@@ -207,7 +207,7 @@ _:
                 binde=, XF86MonBrightnessUp, exec, ./.local/bin/brightness-up     #Fn+F12
                 bind= ALT, S, exec, brightness-sleep       #Goodnight
                 bind= ALT, W, exec, brightness-wakeup      #Wakeup
-        ''
+        '';
       };
     };
   };
