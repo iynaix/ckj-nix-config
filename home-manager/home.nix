@@ -4,6 +4,7 @@
   imports = [
     ./dunst.nix
     ./firefox.nix
+    ./hyprland.nix
     ./mako.nix
     ./shell
   ];
@@ -22,10 +23,10 @@
         source = ./fastfetch;
         recursive = true;
       };
-      "hypr" = {
-        source = ./hypr;
-        recursive = true;
-      };
+#      "hypr" = {
+#        source = ./hypr;
+#        recursive = true;
+#      };
       "i3" = {
         source = ./i3;
         recursive = true;

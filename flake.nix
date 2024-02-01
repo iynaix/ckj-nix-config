@@ -8,14 +8,19 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    impermanence.url = "github:nix-community/impermanence";
+    impermanence = [
+      url = "github:nix-community/impermanence";
+    };
     nixvim = {
       url = "github:nix-community/nixvim";
     };
-    nixpkgs.url = "github:Nixos/nixpkgs/nixos-unstable";
-    sops-nix.url = "github:Mic92/sops-nix";
-    # optional, not necessary for the module
-    # sops-nix.inputs.nixpkgs.follows = "nixpkgs";
+    nixpkgs = {
+      url = "github:Nixos/nixpkgs/nixos-unstable";
+    };
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs @ {
