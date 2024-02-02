@@ -8,9 +8,9 @@ _:
       ./flatpak.nix
       ./gnome.nix
       ./impermanence.nix
-      ./intel-zfs.nix
       ./packages.nix
       ./steam.nix
       ./virt-manager.nix
+      ./zfs.nix
     ];
 }
