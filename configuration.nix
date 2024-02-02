@@ -68,6 +68,7 @@
       btop
       cbonsai
       cmatrix
+      e2fsprogs
       fastfetch
       floorp
       lsd
