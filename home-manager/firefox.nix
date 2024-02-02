@@ -29,7 +29,7 @@
 #            "browser.startup.homepage" = "icloud.com";
             "browser.startup.homepage" = "mail.proton.me";
             "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
-            "browser.tabs.warnOnClose" = true;
+            "browser.tabs.warnOnClose" = false;
             "extensions.pocket.enabled" = false;
 #             "media.ffmpeg.vaapi.enabled" = true;
           };
