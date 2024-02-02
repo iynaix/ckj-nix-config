@@ -5,7 +5,6 @@
     ./dunst.nix
     ./firefox.nix
     ./hyprland.nix
-    ./librewolf.nix
     ./mako.nix
     ./shell
   ];
