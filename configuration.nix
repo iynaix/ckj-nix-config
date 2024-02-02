@@ -78,6 +78,7 @@
       }))
       ripgrep
       sops
+      unetbootin
       wallust
       webcord
       wget
