@@ -174,9 +174,9 @@ fi
 sudo mount --mkdir -t zfs zroot/persist /mnt/persist
 
 while true; do
-    read -rp "Which host to install? (desktop / latitude ) " host
+    read -rp "Which host to install? (amd / desktop / latitude ) " host
     case $host in
-        desktop|latitude ) break;;
+        amd|desktop|latitude ) break;;
         * ) echo "Invalid host. Please select a valid host.";;
     esac
 done
