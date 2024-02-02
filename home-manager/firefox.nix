@@ -33,7 +33,7 @@
             "extensions.pocket.enabled" = false;
 #             "media.ffmpeg.vaapi.enabled" = true;
           };
-          extraConfig = ''
+          userChrome = ''
             @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
             #navigator-toolbox {
