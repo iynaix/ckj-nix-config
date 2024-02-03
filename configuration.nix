@@ -60,15 +60,16 @@
   nixpkgs = {
     config = {
       allowUnfree = true;
+      permittedInsecurePackages = [ "electron-19.1.9" ];
     };
   };
+
 
   environment = {
     systemPackages = with pkgs; [
       btop
       cbonsai
       cmatrix
-      electron
       etcher
       e2fsprogs
       fastfetch
