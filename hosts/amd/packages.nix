@@ -3,10 +3,8 @@
 {
   environment = {
     systemPackages = with pkgs; [
-      acpi
       arc-theme
       breeze-plymouth
-      brightnessctl
 #      (callPackage ../../packages/bar-protonmail/bar-protonmail.nix {})
       (callPackage ../../packages/boxbuddyrs/boxbuddyrs.nix {})
       distrobox
@@ -20,7 +18,6 @@
       lm_sensors
       mpv
       obs-studio
-      parsec-bin
       pkgs.python311Full
       plymouth
       ranger
