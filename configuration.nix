@@ -68,6 +68,7 @@
       btop
       cbonsai
       cmatrix
+      electron
       etcher
       e2fsprogs
       fastfetch
