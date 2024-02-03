@@ -68,6 +68,7 @@
       btop
       cbonsai
       cmatrix
+      etcher
       e2fsprogs
       fastfetch
       floorp
